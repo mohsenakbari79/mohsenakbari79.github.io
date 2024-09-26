@@ -13,9 +13,7 @@ function Header({ changeLanguage }) {
   };
 
   return (
-    <Navbar bg="light" expand="lg">
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
+    <Navbar bg="light" expand="true">
         <Nav className="ml-auto">
           <div className="language-buttons">
             <Button
@@ -32,7 +30,6 @@ function Header({ changeLanguage }) {
             </Button>
           </div>
         </Nav>
-      </Navbar.Collapse>
     </Navbar>
   );
 }

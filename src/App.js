@@ -7,6 +7,8 @@ import './i18n';
 import Header from './components/Header/Header';
 import Resume from './components/Resume/Resume';
 import Footer from './components/Footer/Footer';
+import ProfileBox from './components/ProfileBox/ProfileBox';
+
 
 function App() {
   const { i18n } = useTranslation();
@@ -21,6 +23,7 @@ function App() {
     <div className="App">
       <ThemeProvider dir={direction}>
         <Header changeLanguage={changeLanguage} />
+        <ProfileBox />
         <Resume />
         <Footer />
       </ThemeProvider>

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { useTranslation } from 'react-i18next';
 
 function Resume() {
@@ -6,8 +7,7 @@ function Resume() {
 
   return (
     <div>
-      <h2>{t('resume.name')}</h2>
-      <p>{t('resume.experience')}</p>
+      resume
     </div>
   );
 }

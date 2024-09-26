@@ -35,4 +35,13 @@
     background-color: #4da6ff;
     color: white;
   }
+
+
+@media (max-width: 768px) {
+    .language-buttons {
+        margin: 0 1rem;
+      }
+}
+
+
   

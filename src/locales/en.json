@@ -3,8 +3,18 @@
       "title": "My Resume",
       "language": "Language"
     },
+    "profile":{
+        "name": "mohsen akbari",
+        "expertise": "programmer",
+        "phone": "Phone: 09130330624",
+        "email": "Email: malevin2020@gmail.com",
+        "marital_status": "Marital Status: Single",
+        "military_service": "Military Service : served",
+        "address": "Address: isfahan,iran",
+        "birthday": "Birthday: 2000/07/31"
+    },
     "resume": {
-      "name": "Name: mohsen akbari",
+      "name": "mohsen akbari",
       "experience": "Experience"
     }
   }

@@ -3,8 +3,18 @@
       "title": "رزومه من",
       "language": "زبان"
     },
+    "profile":{
+        "name": " محسن اکبری",
+        "expertise": "برنامه نویس",
+        "phone": "تلفن همراه : ۰۹۱۳۰۳۳۰۶۲۴",
+        "email": "ایمیل : malevin2020@gmail.com",
+        "marital_status": "وضعیت تاهل : مجرد",
+        "military_service": "وضعیت خدمت  : پایان خدمت ",
+        "address": "آدرس : اصفهان",
+        "birthday": "تولد : 1379/05/10"
+    },
     "resume": {
-      "name": "نام: محسن اکبری",
+      "name": " محسن اکبری",
       "experience": "تجربه کاری"
     }
     
