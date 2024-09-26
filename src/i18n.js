@@ -4,17 +4,17 @@ import en from './locales/en.json';
 import fa from './locales/fa.json';
 
 i18n
-  .use(initReactI18next)
-  .init({
+.use(initReactI18next)
+.init({
     resources: {
-      en: { translation: en },
-      fa: { translation: fa },
-    },
-    lng: 'en', // زبان پیش‌فرض
-    fallbackLng: 'en', 
-    interpolation: {
-      escapeValue: false
-    }
-  });
+        en: { translation: en },
+        fa: { translation: fa },
+      },
+  lng: 'en', // زبان پیش‌فرض
+  fallbackLng: 'en',
+  interpolation: {
+    escapeValue: false
+  }
+});
 
 export default i18n;
