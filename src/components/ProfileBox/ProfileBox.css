@@ -1,78 +1,85 @@
 .profile-container {
-    width: 80%;
-    margin: 7rem auto;
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 15px;
-    text-align: center;
-    position: relative; /* برای قرار دادن تصویر خارج از باکس */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1rem;
-  }
-  
-  .profile-image {
-    position: absolute;
-    top: -6rem; /* برای قرار دادن نصف تصویر خارج از باکس */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 12rem;
-    height: 12rem;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 3px solid #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .profile-image img {
-    width: 100%;
-    height: auto;
-  }
-  
+  width: 80%;
+  margin: 7rem auto;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
 
-  .profile-title  {
-    margin: 10px 0;
-    margin-top: 5rem; 
+.profile-image {
+  position: absolute;
+  top: -6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-    color: hsl(240, 37%, 26%);
-  }
-  
+.profile-image img {
+  width: 100%;
+  height: auto;
+}
 
-  .profile-details {
-    text-align:right;
-    margin: 1rem 1rem;
+
+.profile-title {
+  margin: 10px 0;
+  margin-top: 5rem;
+
+  color: hsl(240, 37%, 26%);
+}
+
+
+.profile-details {
+  text-align: right;
+  margin: 1rem 1rem;
+}
+
+
+.profile-details p {
+  font-size: 1.4rem;
+  text-align: center;
+  direction: rtl !important;
+  margin: 5px 0;
+  color: #666;
+}
+
+
+
+
+@media (max-width: 1200px) {
+  .profile-container {
+    width: 90%;
   }
-  
- 
+
   .profile-details p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     text-align: center;
     direction: rtl !important;
     margin: 5px 0;
     color: #666;
   }
-  
-  
-@media (max-width: 768px) {
-    .profile-container {
-      width: 90%;
-    }
-    .profile-details p {
-        font-size: 1rem;
-        text-align: center;
-        direction: rtl !important;
-        margin: 5px 0;
-        color: #666;
-      }
 }
-@media (max-width: 1200px) {
+
+@media (max-width: 768px) {
   .profile-container {
     width: 90%;
+    padding: 20px 5px;
+    
   }
+
   .profile-details p {
-      font-size: 1.2rem;
-      text-align: center;
-      direction: rtl !important;
-      margin: 5px 0;
-      color: #666;
-    }
+    font-size: 1rem;
+    text-align: center;
+    direction: rtl !important;
+    margin: 5px 0;
+    color: #666;
+  }
 }

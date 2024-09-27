@@ -28,6 +28,9 @@
     padding-top: 2rem;
     color: #333;
     direction: ltr;
+    text-align: justify;
+    text-align-last: center;
+
 }
 
 .about-me-container.rtl p {
@@ -79,20 +82,68 @@
 } */
 
 
+.experience-box {
+    border: 2px solid #0025cc54;
+    border-radius: 1rem;
+    padding: 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.356);
+    border-radius: 4rem !important;
+}
+
+.position {
+    font-size: 1.5rem;
+    color: #007bff;
+}
+
+.company {
+    font-size: 1.25rem;
+    margin-top: 10px;
+    color: #333;
+}
+
+.period {
+    font-size: 1rem;
+    margin-top: 5px;
+    color: #777;
+}
+
+.tasks-list {
+    margin-top: 20px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.tasks-list.rtl {
+    margin-top: 20px;
+    direction: rtl;
+    text-align: right;
+}
+
+
+.tasks-list li {
+    line-height: 1.6;
+}
+
+
+
 
 @media (max-width: 768px) {
     .resume-container {
         width: 95%;
         margin: 20px auto;
-        padding: 20px;
+        padding: 0.5rem;
         text-align: center;
         margin-top: 2rem;
     }
+
     .resume-container h1 {
-       font-size: 1.4rem;
-       padding: 1rem 2rem;
+        font-size: 1.4rem;
+        padding: 1rem 2rem;
 
     }
+
     .skill-box {
         padding: 7px 9px;
         width: 80px;
@@ -103,8 +154,30 @@
     .about-me-container p {
         font-size: 1rem;
         line-height: 1.4;
-        padding-top: 1rem;
+        padding: 1rem;
         color: #333;
     }
 
+    /* experience-box */
+
+    .experience-box{
+        padding: 2rem 0 !important;
+    }
+    .experience-box h2{
+        font-size: 1.2rem;
+        font-weight: 500;
+
+    }
+    .experience-box h5{
+        font-size: 1rem;
+
+    }
+    .experience-box p{
+        font-size: 0.8rem;
+
+    }
+    .experience-box li{
+        font-size: 0.8rem;
+
+    }
 }
