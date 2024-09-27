@@ -1,0 +1,60 @@
+.about-me-container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: justify;
+    text-align-last: center;
+}
+
+.main-resume h1 {
+    color: var(--title-color);
+    display: inline-block;
+    border-bottom: 4px solid var(--line-color);
+    padding: 1rem 3rem;
+    max-width: 26rem;
+}
+
+.about-me-container p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    padding-top: 2rem;
+    color: #333;
+    direction: ltr; 
+}
+
+.about-me-container.rtl p {
+    direction: rtl;
+    text-align: justify;
+    text-align-last: center;
+}
+
+
+
+.social-media-container {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+
+.social-icons a {
+    margin: 0 1rem;
+    font-size: 4em;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #0056b3;
+}
+
+@media (max-width: 768px) {
+
+    .about-me-container p {
+        font-size: 1rem;
+        line-height: 1.4;
+        padding-top: 1rem;
+        color: #333;
+    }
+
+}

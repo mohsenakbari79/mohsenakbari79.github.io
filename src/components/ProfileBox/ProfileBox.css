@@ -1,5 +1,5 @@
 .profile-container {
-    width: 90%;
+    width: 80%;
     margin: 7rem auto;
     background-color: #f0f0f0;
     padding: 20px;
@@ -52,6 +52,9 @@
   
   
 @media (max-width: 768px) {
+    .profile-container {
+      width: 90%;
+    }
     .profile-details p {
         font-size: 1rem;
         text-align: center;
@@ -59,4 +62,16 @@
         margin: 5px 0;
         color: #666;
       }
+}
+@media (max-width: 1200px) {
+  .profile-container {
+    width: 90%;
+  }
+  .profile-details p {
+      font-size: 1.2rem;
+      text-align: center;
+      direction: rtl !important;
+      margin: 5px 0;
+      color: #666;
+    }
 }

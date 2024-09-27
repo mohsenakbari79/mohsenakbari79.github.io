@@ -13,8 +13,12 @@
         "address": "Address: isfahan,iran",
         "birthday": "Birthday: 2000/07/31"
     },
-    "resume": {
-      "name": "mohsen akbari",
-      "experience": "Experience"
+    "about_me": {
+      "title": "about me",
+      "summary": "I am a programmer who is enthusiastic about learning new skills and technologies in the field of programming. My programming career began with entering university and learning languages like C and C++. Subsequently, due to my interest in programming, I started learning Python. The unique features of Python increased my interest in this language, and since then, I have been striving to deepen my knowledge in this area."
+    },
+    "social_media":{
+      "title": "social media"
     }
+    
   }
