@@ -19,6 +19,9 @@
     },
     "social_media":{
       "title": "social media"
+    },
+    "skills": {
+      "title": "Skills"
     }
     
   }

@@ -1,26 +1,33 @@
-.about-me-container {
-    width: 80%;
+.resume-container {
+    width: 82%;
     margin: 20px auto;
     padding: 20px;
-    border-radius: 10px;
-    text-align: justify;
-    text-align-last: center;
+    text-align: center;
+    margin-top: 2rem;
 }
 
-.main-resume h1 {
+.resume-container h1 {
     color: var(--title-color);
     display: inline-block;
     border-bottom: 4px solid var(--line-color);
     padding: 1rem 3rem;
-    max-width: 26rem;
+    margin-bottom: 1rem;
 }
+
+
+.about-me-container {
+    border-radius: 10px;
+    text-align: center;
+}
+
+
 
 .about-me-container p {
     font-size: 1.5rem;
     line-height: 1.8;
     padding-top: 2rem;
     color: #333;
-    direction: ltr; 
+    direction: ltr;
 }
 
 .about-me-container.rtl p {
@@ -31,11 +38,14 @@
 
 
 
-.social-media-container {
-    margin-top: 2rem;
-    text-align: center;
-}
 
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
 
 .social-icons a {
     margin: 0 1rem;
@@ -48,7 +58,47 @@
     color: #0056b3;
 }
 
+
+.skill-box {
+    border: 2px solid #007bff;
+    border-radius: 1rem;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    width: 140px;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 
+.skill-box:hover {
+    background-color: #007bff;
+    color: white;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+} */
+
+
+
 @media (max-width: 768px) {
+    .resume-container {
+        width: 95%;
+        margin: 20px auto;
+        padding: 20px;
+        text-align: center;
+        margin-top: 2rem;
+    }
+    .resume-container h1 {
+       font-size: 1.4rem;
+       padding: 1rem 2rem;
+
+    }
+    .skill-box {
+        padding: 7px 9px;
+        width: 80px;
+        font-size: 1.2rem;
+
+    }
 
     .about-me-container p {
         font-size: 1rem;
