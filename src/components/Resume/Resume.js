@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { FaGithub, FaTelegramPlane } from 'react-icons/fa';
 
 import './Resume.css';
+
 function Resume() {
   const { t, i18n } = useTranslation();
   const isRTL = i18n.language === 'fa';

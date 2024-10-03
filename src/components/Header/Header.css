@@ -1,47 +1,65 @@
 .language-buttons {
-    display: inline-flex;
-    border-radius: 50px; /* شکل بیضی */
-    overflow: hidden;
-    margin: 0 3rem;
-  }
-  
-  .language-buttons button {
-    border-radius: 0;
-    border: 1px solid #007bff;
-    background-color: aliceblue ;
-    color: black;
-    transition: background-color 0.3s ease;
-    padding: 0.5rem 1rem; /* اندازه مناسب برای دکمه‌ها */
-    margin: 0; /* حذف فاصله بین دکمه‌ها */
-  }
-  
-  .language-buttons button:first-child {
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 50px;
-  }
-  
-  .language-buttons button:last-child {
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
-  }
-  
-  .language-buttons button.active {
-    background-color: #4da6ffe0; 
-    color: whibte;
-    border-color: #4da6ff;
-  }
-  
-  .language-buttons button:hover {
-    background-color: #4da6ff;
-    color: white;
-  }
-
-
-@media (max-width: 768px) {
-    .language-buttons {
-        margin: 0 1rem;
-      }
+  display: inline-flex;
+  border-radius: 50px;
+  /* شکل بیضی */
+  overflow: hidden;
+  margin: 0 3rem;
 }
 
+.language-buttons button {
+  border-radius: 0;
+  border: 1px solid #007bff;
+  background-color: aliceblue;
+  color: black;
+  transition: background-color 0.3s ease;
+  padding: 0.5rem 1rem;
+  /* اندازه مناسب برای دکمه‌ها */
+  margin: 0;
+  /* حذف فاصله بین دکمه‌ها */
+}
 
+.language-buttons button:first-child {
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.language-buttons button:last-child {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.language-buttons button.active {
+  background-color: #4da6ffe0;
+  color: whibte;
+  border-color: #4da6ff;
+}
+
+.language-buttons button:hover {
+  background-color: #4da6ff;
+  color: white;
+}
+
+.ml-auto{
+  margin-right: 2rem;
+  font-size: 2rem;
+}
+.space-icon{
+  margin: 0 1rem;
+}
+
+@media (max-width: 768px) {
+  .language-buttons {
+    margin: 0 1rem;
+  }
   
+}
+@media (max-width: 520px) {
+  .ml-auto{
+    margin-right: 0.5rem;
+    font-size: 2rem;
+  }
+  .space-icon{
+    margin: 0.5rem ;
+  }
+  
+}

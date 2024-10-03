@@ -5,10 +5,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import './i18n';
 import Header from './components/Header/Header';
-import Resume from './components/Resume/Resume';
 import Footer from './components/Footer/Footer';
-import ProfileBox from './components/ProfileBox/ProfileBox';
-
+import Home from './pages/Home';
+import Contact from './pages/Contact';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
   const { i18n } = useTranslation();
@@ -22,9 +22,13 @@ function App() {
   return (
     <div className="App">
       <ThemeProvider dir={direction}>
-        <Header changeLanguage={changeLanguage} />
-        <ProfileBox />
-        <Resume />
+        <Router>
+          <Header changeLanguage={changeLanguage} />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </Router>
         <Footer />
       </ThemeProvider>
     </div>
