@@ -1,8 +1,9 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="refresh" content="0; url=/" />
-  </head>
-  <body>
-  </body>
-</html>
+<script type="text/javascript">
+    // Extract the current path after the domain (e.g., /contact)
+    var redirectTo = window.location.pathname;
+    
+    // If there's no specific path or it's not root, redirect to index.html with the path as hash
+    if (redirectTo !== '/') {
+      window.location.href = '/' + '#' + redirectTo;
+    }
+  </script>
