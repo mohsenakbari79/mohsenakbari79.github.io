@@ -2,12 +2,19 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=./index.html">
+    <title>Redirecting...</title>
     <script type="text/javascript">
         var path = window.location.pathname;
-        window.location.replace("/" + path);
+        var hash = window.location.hash;
+
+        if (hash) {
+            window.location.replace("./index.html" + hash);
+        } else {
+            window.location.replace("./index.html");
+        }
     </script>
 </head>
 <body>
+    <p>Redirecting... If you are not redirected, <a href="./index.html">click here</a>.</p>
 </body>
 </html>
