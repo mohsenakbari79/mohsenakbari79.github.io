@@ -5,16 +5,13 @@
     <title>Redirecting...</title>
     <script type="text/javascript">
         var path = window.location.pathname;
-        var hash = window.location.hash;
-
-        if (hash) {
-            window.location.replace("./index.html" + hash);
-        } else {
-            window.location.replace("./index.html");
+        
+        if (path !== '/' && path !== '/index.html') {
+            window.location.replace("/" + window.location.search + window.location.hash);
         }
     </script>
 </head>
 <body>
-    <p>Redirecting... If you are not redirected, <a href="./index.html">click here</a>.</p>
+    <p>Redirecting... If you are not redirected, <a href="./">click here</a>.</p>
 </body>
 </html>
