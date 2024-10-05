@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Not Found</title>
+    <script>
+      // Get the current path
+      var redirectPath = window.location.pathname;
+
+      // Redirect to the corresponding path in your React app
+      if (redirectPath !== '/') {
+        // Redirect to the root, and React will handle the routing
+        window.location.replace('/'); // Change this line to the base path of your app
+      }
+    </script>
+  </head>
+  <body>
+    <h1>404 - Page Not Found</h1>
+    <p>Redirecting you to the homepage...</p>
+  </body>
+</html>
