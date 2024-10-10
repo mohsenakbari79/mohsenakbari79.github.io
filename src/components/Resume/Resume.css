@@ -63,13 +63,13 @@
 
 
 .skill-box {
-    border: 2px solid #007bff;
+    border: 2px solid var(--border-color);
     border-radius: 1rem;
     padding: 10px 20px;
     text-align: center;
     font-size: 1.5rem;
     width: 140px;
-    background-color: #f8f9fa;
+    background-color: var(--background-container-color);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
@@ -83,10 +83,10 @@
 
 
 .experience-box {
-    border: 2px solid #0025cc54;
+    border: 2px solid var(--border-color);
     border-radius: 1rem;
     padding: 20px;
-    background-color: #f8f9fa;
+    background-color: var(--background-container-color);;
     text-align: center;
     box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.356);
     border-radius: 4rem !important;

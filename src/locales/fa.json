@@ -39,7 +39,21 @@
           ]
         }
       ]
+    },
+    "contact": {
+    "title": "تماس با من",
+    "name": "نام شما",
+    "email": "ایمیل شما",
+    "message": "پیام شما",
+    "namePlaceholder": "نام خود را وارد کنید",
+    "emailPlaceholder": "ایمیل خود را وارد کنید",
+    "messagePlaceholder": "پیام خود را وارد کنید",
+    "send": "ارسال پیام",
+    "sending": "در حال ارسال...",
+    "successMessage": "پیام شما با موفقیت ارسال شد!",
+    "formError": "لطفا تمامی فیلدها را پر کنید."
     }
+   
 
     
   }
