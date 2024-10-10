@@ -2,4 +2,7 @@
   --title-color: hwb(240 16% 64%);
   --title-size: 1.5rem;
   --line-color: hwb(240 24% 19%);
+  --button-active-color: #4da6ffe0;
+  --background-container-color:#f8f9fa ;
+  --border-color: #0025cc54;
 }

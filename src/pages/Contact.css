@@ -1,0 +1,29 @@
+/* برای تنظیمات بیشتر فرم تماس */
+.call-form {
+    max-width: 1000px;
+    width: 90%;
+    padding: 2vh;
+    text-align: center;
+
+}
+.call-form .text-center{
+    margin-top: 10px;
+}
+
+.call-form form {
+    margin-top: 20px;
+}
+
+.call-form form  input {
+    background-color: var(--background-container-color) ;
+}
+.call-form form  textarea {
+    background-color: var(--background-container-color) ;
+}
+.call-form form button {
+    background-color: var(--button-active-color);
+    width: 100%;
+    border-radius: 10vh;
+
+}
+

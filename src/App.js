@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import './i18n';
 import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
+// import Footer from './components/Footer/Footer';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import { HashRouter as Router, Route, Routes } from 'react-router-dom';
@@ -29,7 +29,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </Router>
-        <Footer />
+        {/* <Footer /> */}
       </ThemeProvider>
     </div>
   );
