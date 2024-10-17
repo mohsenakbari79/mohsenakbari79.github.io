@@ -48,6 +48,7 @@
     "namePlaceholder": "نام خود را وارد کنید",
     "emailPlaceholder": "ایمیل خود را وارد کنید",
     "messagePlaceholder": "پیام خود را وارد کنید",
+    "phonePlaceholder": "شماره‌ تلفن خود را وارد کنید",
     "send": "ارسال پیام",
     "sending": "در حال ارسال...",
     "successMessage": "پیام شما با موفقیت ارسال شد!",

@@ -48,6 +48,7 @@
     "namePlaceholder": "Enter your name",
     "emailPlaceholder": "Enter your email",
     "messagePlaceholder": "Enter your message",
+    "phonePlaceholder": "Enter your phone number",
     "send": "Send Message",
     "sending": "Sending...",
     "successMessage": "Your message was sent successfully!",
