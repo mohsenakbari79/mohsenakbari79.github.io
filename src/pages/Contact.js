@@ -6,7 +6,7 @@ import "./Contact.css"
 
 const Contact = () => {
   const { t } = useTranslation();
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
   const [messageSent, setMessageSent] = useState(false);
   const [error, setError] = useState('');
   const [sendingDisabled, setSendingDisabled] = useState(false);
@@ -19,7 +19,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    if (!formData.name || !formData.email || !formData.message) {
+    if (!formData.name || !formData.email || !formData.phone || !formData.message) {
       setError(t('contact.formError'));
       return;
     }
@@ -30,10 +30,11 @@ const Contact = () => {
     emailjs.send(
       process.env.REACT_APP_EMAILJS_SERVICE_ID, 
       process.env.REACT_APP_EMAILJS_TEMPLATE_ID, 
-
+      
       {
         from_name: formData.name,
         from_email: formData.email,
+        from_phone: formData.phone,
         message: formData.message,
       },
       process.env.REACT_APP_EMAILJS_USER_ID
@@ -41,7 +42,7 @@ const Contact = () => {
     .then((response) => {
       console.log('SUCCESS!', response.status, response.text);
       setMessageSent(true);
-      setFormData({ name: '', email: '', message: '' }); 
+      setFormData({ name: '', email: '', phone: '', message: '' }); 
     })
     .catch((err) => {
       console.error('FAILED...', err);
@@ -89,6 +90,17 @@ const Contact = () => {
                 name="email"
                 placeholder={t('contact.emailPlaceholder')}
                 value={formData.email}
+                onChange={handleInputChange}
+              />
+            </Form.Group>
+
+            <Form.Group controlId="formPhone" className="mb-3">
+              <Form.Label>{t('contact.phone')}</Form.Label>
+              <Form.Control
+                type="text"
+                name="phone"
+                placeholder={t('contact.phonePlaceholder')}
+                value={formData.phone}
                 onChange={handleInputChange}
               />
             </Form.Group>
