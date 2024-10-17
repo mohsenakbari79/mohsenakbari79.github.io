@@ -28,6 +28,9 @@ function Resume() {
           <a href="https://t.me/malevin" target="_blank" rel="noopener noreferrer">
             <FaTelegramPlane />
           </a>
+          <a href='https://virgool.io/@malevin2020'>
+          <img className='social-icons-img' src={`${process.env.PUBLIC_URL}/logovirgool.svg`}  alt="My SVG Icon" />
+          </a>
         </div>
       </div>
       <div className="resume-container">
