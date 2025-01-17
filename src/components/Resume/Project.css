@@ -1,0 +1,133 @@
+.projects-container {
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.project-box {
+  border: 2px solid var(--border-color);
+  border-radius: 1rem;
+  padding: 20px;
+  background-color: var(--background-container-color);
+  text-align: center;
+  border-radius: 2rem 1rem !important;
+  position: relative;
+  overflow: hidden; /* جلوگیری از بیرون زدن تاریخ */
+}
+
+.slick-prev,
+.slick-next {
+  background-color: #0000003a;
+  color: #000000;
+  border-radius: 3rem;
+  z-index: 1;
+}
+
+.slick-slide {
+  padding: 0 10px;
+}
+
+.technologies-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: 10px 0;
+  padding: 0;
+}
+
+.technologies-list li {
+  list-style: none;
+  background-color: var(--background-container-color);
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  color: #333;
+  text-align: center;
+  width: auto;
+  min-width: 100px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.technologies-list li:hover {
+  transform: translateY(-5px);
+}
+
+/* استایل برای تاریخ شروع و پایان پروژه */
+.project-time {
+  display: flex;
+  justify-content: space-between; /* تاریخ‌ها کنار هم با فاصله مناسب */
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.start-date,
+.end-date {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Media Query برای اندازه‌های مختلف صفحه */
+@media (max-width: 1024px) {
+  .projects-container {
+    padding: 15px;
+  }
+
+  .project-box {
+    padding: 15px;
+  }
+
+  .slick-prev,
+  .slick-next {
+    padding: 4px;
+  }
+
+  .slick-slide {
+    padding: 0 8px;
+  }
+
+  .technologies-list li {
+    font-size: 0.85rem;
+    padding: 8px 12px;
+    min-width: 80px;
+  }
+}
+
+/* Media Query برای اندازه صفحه‌های کوچک‌تر */
+@media (max-width: 600px) {
+  .projects-container {
+    padding: 10px;
+  }
+
+  .project-box {
+    padding: 10px;
+  }
+
+  .slick-prev,
+  .slick-next {
+    padding: 3px;
+  }
+
+  .slick-slide {
+    padding: 0 5px;
+  }
+
+  .technologies-list li {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+    min-width: 70px;
+  }
+
+  /* استایل برای تاریخ شروع و پایان در اندازه صفحه‌های کوچک‌تر */
+  .project-time {
+    font-size: 12px;
+    padding: 0 5px;
+  }
+
+  .start-date,
+  .end-date {
+    font-size: 0.7rem;
+    font-weight: normal;
+  }
+}

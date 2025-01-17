@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useTranslation } from 'react-i18next';
 import { FaGithub, FaTelegramPlane } from 'react-icons/fa';
-
+import Project from './Project';
 import './Resume.css';
 
 function Resume() {
@@ -29,7 +29,7 @@ function Resume() {
             <FaTelegramPlane />
           </a>
           <a href='https://virgool.io/@malevin2020'>
-          <img className='social-icons-img' src={`${process.env.PUBLIC_URL}/logovirgool.svg`}  alt="My SVG Icon" />
+            <img className='social-icons-img' src={`${process.env.PUBLIC_URL}/logovirgool.svg`} alt="My SVG Icon" />
           </a>
         </div>
       </div>
@@ -43,7 +43,7 @@ function Resume() {
           ))}
         </div>
       </div>
-      
+
       <div className="resume-container">
         <h1>{t('experience.title')}</h1>
         {experiences.map((exp, index) => (
@@ -59,6 +59,12 @@ function Resume() {
             </ul>
           </div>
         ))}
+      </div>
+
+      {/* پروژه‌ها */}
+      <div className="resume-container">
+        <h1>{t('project.title')}</h1>
+        <Project />
       </div>
 
     </div>

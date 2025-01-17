@@ -53,6 +53,51 @@
     "sending": "Sending...",
     "successMessage": "Your message was sent successfully!",
     "formError": "Please fill in all fields."
-  }
+  },
+
+  
+  "project": {
+    "title": "My Projects",
+    "technologiesUsed": "Technologies Used",
+    "client": "Client",
+    "startDate": "Project Start Date",
+    "endDate": "Project End Date"
+  },
+  "projects": [
+    {
+      "title": "Shift Supervisor",
+      "description": "In this project, users with different access levels can enter daily information related to their department, and admins can receive various daily, monthly, and production reports. The main challenge was generating complex Excel reports with numerous rows and columns without a consistent structure as per the client's request.",
+      "technologies": ["Python", "Django", "PostgreSQL", "openpyxl", "pandas"],
+      "client": "Ipek Yadegar Ilyad",
+      "startDate": "2024/10/02",
+      "endDate": "Present"
+    },
+    {
+      "title": "Shirino Hotel",
+      "description": "This project is a food reservation system for employees, allowing them to order food on specific days for themselves and their families. The priority system is automated or can be managed by the employer, with prioritized employees receiving SMS notifications to collect their meals.",
+      "technologies": ["Python", "Django", "PostgreSQL", "APScheduler","docker", "nginx"],
+      "client": "Ipek Yadegar Ilyad",
+      "startDate": "2024/11/22",
+      "endDate": "2024/12/22"
+    },
+    {
+      "title": "Royasazan",
+      "description": "This project is a website for introducing a company, featuring sections such as an overview of the company, services, and projects. Each project’s location is displayed on a map using folium. The project page also includes a gallery and detailed descriptions.",
+      "technologies": ["Python", "Django", "PostgreSQL", "MVT", "docker", "nginx", "gunicorn","folium"],
+      "client": "Royasazan",
+      "startDate": "2020/07/22",
+      "endDate": "2020/09/23"
+    },
+    {
+      "title": "Tavana",
+      "description": "This project is a board management system that allows users to define pins and send or receive data on each pin. Using Django and Celery, tasks can be scheduled to run automatically at specified times. Docker is used for deployment, and RabbitMQ is used for message management, ensuring scalable and automated operations.",
+      "technologies": ["Python", "Django", "drf", "docker", "RabbitMQ", "Celery"],
+      "client": "University Project",
+      "startDate": "2022/06/22",
+      "endDate": "2022/09/22"
+    }
+  ]
+  
+  
     
   }
