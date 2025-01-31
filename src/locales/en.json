@@ -1,29 +1,29 @@
 {
-    "header": {
-      "title": "My Resume",
-      "language": "Language"
-    },
-    "profile":{
-        "name": "mohsen akbari",
-        "expertise": "programmer",
-        "phone": "Phone: 09130330624",
-        "email": "Email: malevin2020@gmail.com",
-        "marital_status": "Marital Status: Single",
-        "military_service": "Military Service : served",
-        "address": "Address: isfahan,iran",
-        "birthday": "Birthday: 2000/07/31"
-    },
-    "about_me": {
-      "title": "about me",
-      "summary": "I am a programmer who is enthusiastic about learning new skills and technologies in the field of programming. My programming career began with entering university and learning languages like C and C++. Subsequently, due to my interest in programming, I started learning Python. The unique features of Python increased my interest in this language, and since then, I have been striving to deepen my knowledge in this area."
-    },
-    "social_media":{
-      "title": "social media"
-    },
-    "skills": {
-      "title": "Skills"
-    },
-    "experience": {
+  "header": {
+    "title": "My Resume",
+    "language": "Language"
+  },
+  "profile": {
+    "name": "mohsen akbari",
+    "expertise": "programmer",
+    "phone": "Phone: 09130330624",
+    "email": "Email: malevin2020@gmail.com",
+    "marital_status": "Marital Status: Single",
+    "military_service": "Military Service : served",
+    "address": "Address: isfahan,iran",
+    "birthday": "Birthday: 2000/07/31"
+  },
+  "about_me": {
+    "title": "about me",
+    "summary": "I am a programmer who is enthusiastic about learning new skills and technologies in the field of programming. My programming career began with entering university and learning languages like C and C++. Subsequently, due to my interest in programming, I started learning Python. The unique features of Python increased my interest in this language, and since then, I have been striving to deepen my knowledge in this area."
+  },
+  "social_media": {
+    "title": "social media"
+  },
+  "skills": {
+    "title": "Skills"
+  },
+  "experience": {
     "title": "Work Experience",
     "tasks_title": "Tasks and Achievement",
     "jobs": [
@@ -54,8 +54,6 @@
     "successMessage": "Your message was sent successfully!",
     "formError": "Please fill in all fields."
   },
-
-  
   "project": {
     "title": "My Projects",
     "technologiesUsed": "Technologies Used",
@@ -67,23 +65,47 @@
     {
       "title": "Shift Supervisor",
       "description": "In this project, users with different access levels can enter daily information related to their department, and admins can receive various daily, monthly, and production reports. The main challenge was generating complex Excel reports with numerous rows and columns without a consistent structure as per the client's request.",
-      "technologies": ["Python", "Django", "PostgreSQL", "openpyxl", "pandas"],
+      "technologies": [
+        "Python",
+        "Django",
+        "PostgreSQL",
+        "openpyxl",
+        "pandas",
+        "docker"
+      ],
       "client": "Ipek Yadegar Ilyad",
       "startDate": "2024/10/02",
-      "endDate": "Present"
+      "endDate": "Ongoing"
     },
     {
       "title": "Shirino Hotel",
       "description": "This project is a food reservation system for employees, allowing them to order food on specific days for themselves and their families. The priority system is automated or can be managed by the employer, with prioritized employees receiving SMS notifications to collect their meals.",
-      "technologies": ["Python", "Django", "PostgreSQL", "APScheduler","docker", "nginx"],
+      "technologies": [
+        "Python",
+        "Django",
+        "PostgreSQL",
+        "APScheduler",
+        "docker",
+        "nginx",
+        "drf"
+      ],
       "client": "Ipek Yadegar Ilyad",
       "startDate": "2024/11/22",
-      "endDate": "2024/12/22"
+      "endDate": "2025/02/01"
     },
     {
       "title": "Royasazan",
       "description": "This project is a website for introducing a company, featuring sections such as an overview of the company, services, and projects. Each project’s location is displayed on a map using folium. The project page also includes a gallery and detailed descriptions.",
-      "technologies": ["Python", "Django", "PostgreSQL", "MVT", "docker", "nginx", "gunicorn","folium"],
+      "technologies": [
+        "Python",
+        "Django",
+        "PostgreSQL",
+        "MVT",
+        "docker",
+        "nginx",
+        "gunicorn",
+        "folium"
+      ],
       "client": "Royasazan",
       "startDate": "2020/07/22",
       "endDate": "2020/09/23"
@@ -91,13 +113,42 @@
     {
       "title": "Tavana",
       "description": "This project is a board management system that allows users to define pins and send or receive data on each pin. Using Django and Celery, tasks can be scheduled to run automatically at specified times. Docker is used for deployment, and RabbitMQ is used for message management, ensuring scalable and automated operations.",
-      "technologies": ["Python", "Django", "drf", "docker", "RabbitMQ", "Celery"],
+      "technologies": [
+        "Python",
+        "Django",
+        "drf",
+        "docker",
+        "RabbitMQ",
+        "Celery"
+      ],
       "client": "University Project",
       "startDate": "2022/06/22",
       "endDate": "2022/09/22"
     }
+  ],
+  "courses": {
+    "title": "Courses I've Taken",
+    "date": "Courses End Date",
+    "source": "Source"
+  },
+  "course": [
+    {
+      "title": "Advanced Django",
+      "date": "2023-02-17",
+      "source": "maktabkhooneh",
+      "link": "https://maktabkhooneh.org/certificates/mk-729eq0/?print=true"
+    },
+    {
+      "title": "Machine Learning with Python",
+      "date": "2021-11-23",
+      "source": "maktabkhooneh",
+      "link": "https://maktabkhooneh.org/certificates/mk-gll8de/?print=true"
+    },
+    {
+      "title": "Advanced Python Programming",
+      "date": "2019-10-27",
+      "source": "maktabkhooneh",
+      "link": "https://maktabkhooneh.org/certificates/mk-729eq0/?print=true"
+    }
   ]
-  
-  
-    
-  }
+}

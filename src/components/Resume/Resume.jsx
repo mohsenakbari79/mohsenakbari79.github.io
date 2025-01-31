@@ -3,7 +3,8 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { FaGithub, FaTelegramPlane } from 'react-icons/fa';
 import Project from './Project';
-import './Resume.css';
+import Courses from './Courses';
+import './CSS/Resume.css';
 
 function Resume() {
   const { t, i18n } = useTranslation();
@@ -65,6 +66,10 @@ function Resume() {
       <div className="resume-container">
         <h1>{t('project.title')}</h1>
         <Project />
+      </div>
+      <div className="resume-container">
+        <h1>{t('courses.title')}</h1>
+        <Courses />
       </div>
 
     </div>

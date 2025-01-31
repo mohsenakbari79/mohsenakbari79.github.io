@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import './Project.css';
+import './CSS/Project.css';
 
 function Project() {
   const { t } = useTranslation();
@@ -25,7 +25,7 @@ function Project() {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 800,
         settings: {
           slidesToShow: 1,
         },

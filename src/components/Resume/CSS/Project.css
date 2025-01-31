@@ -78,11 +78,8 @@
     padding: 15px;
   }
 
-  .slick-prev,
-  .slick-next {
-    padding: 4px;
-  }
 
+  
   .slick-slide {
     padding: 0 8px;
   }
@@ -95,18 +92,23 @@
 }
 
 /* Media Query برای اندازه صفحه‌های کوچک‌تر */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .projects-container {
     padding: 10px;
   }
 
   .project-box {
     padding: 10px;
+    font-size: 0.8rem;
+  }
+  .project-box h4 {
+    padding: 10px;
+    font-size: 0.8rem;
   }
 
   .slick-prev,
   .slick-next {
-    padding: 3px;
+    display: none;
   }
 
   .slick-slide {
@@ -115,8 +117,8 @@
 
   .technologies-list li {
     font-size: 0.8rem;
-    padding: 6px 10px;
-    min-width: 70px;
+    padding: 5px 8px;
+    min-width: 1rem;
   }
 
   /* استایل برای تاریخ شروع و پایان در اندازه صفحه‌های کوچک‌تر */
@@ -131,3 +133,47 @@
     font-weight: normal;
   }
 }
+
+@media (max-width: 480px) {
+  .projects-container {
+    padding: 5px;
+  }
+
+  .project-box {
+    padding: 8px;
+    font-size: 0.7rem;
+    border-radius: 1rem;
+  }
+
+  .project-box h4 {
+    font-size: 0.7rem;
+    margin-bottom: 5px;
+  }
+
+  .technologies-list {
+    gap: 5px;
+  }
+
+  .technologies-list li {
+    font-size: 0.7rem;
+    padding: 4px 6px;
+    min-width: 60px;
+    border-radius: 5px;
+  }
+
+  .project-time {
+    font-size: 0.6rem;
+    padding: 5px 0;
+  }
+
+  .start-date,
+  .end-date {
+    font-size: 0.6rem;
+  }
+
+  .slick-slide {
+    padding: 0 3px;
+  }
+}
+
+
