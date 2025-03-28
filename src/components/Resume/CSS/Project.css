@@ -136,7 +136,8 @@
 
 @media (max-width: 480px) {
   .projects-container {
-    padding: 5px;
+    padding: 1rem;
+    
   }
 
   .project-box {
