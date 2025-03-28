@@ -275,3 +275,72 @@
         padding-right: 10px;
     }
 }
+
+
+@media print {
+    .resume-container {
+      width: 210mm;
+      margin: 0 auto;
+      padding: 9.4mm;
+      text-align: center;
+    }
+  
+    .about-me-container p {
+      width: 200mm;
+      font-size: 11pt;
+      line-height: 2.1;
+      padding: 0;
+      margin: 0 auto;
+      text-align: justify;
+      text-align-last: center;
+    }
+  
+    .skills-container {
+      display: block; 
+      width: 190mm;
+      /* margin: 15mm auto 0 auto ; */
+    }
+  
+    .skill-box {
+      display: inline-block;
+      width: 30mm; 
+      margin: 2mm;
+      padding: 1mm;
+      font-size: 10pt;
+      box-shadow: none; 
+    }
+  
+    .experience-box {
+      width: 190mm;
+      margin: 10mm auto;
+      padding: 5mm;
+      box-shadow: none;
+      border-radius: 0; 
+    }
+  
+    .tasks-list {
+      width: 180mm;
+      margin: 5mm auto;
+      padding-left: 5mm;
+    }
+  
+    .tasks-list.rtl {
+      padding-right: 5mm;
+      padding-left: 0;
+    }
+    .resume-container h1 {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+        page-break-after: avoid !important;
+        /* height: auto !important; اطمینان از ارتفاع طبیعی */
+        /* overflow: hidden !important; جلوگیری از سرریز شدن */
+      }
+    
+    /* .resume-container{
+        page-break-inside: avoid;
+    } */
+    /* .experience-box {
+        page-break-inside: avoid;
+      } */
+  }
+  

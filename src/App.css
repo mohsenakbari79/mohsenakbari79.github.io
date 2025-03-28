@@ -6,3 +6,9 @@
   --background-container-color:#f8f9fa ;
   --border-color: #0025cc54;
 }
+
+@media print {
+  .navbar {
+    display: none !important;
+  }
+}

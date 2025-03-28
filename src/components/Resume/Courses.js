@@ -32,7 +32,7 @@ const Courses = () => {
   const all_course = t('course', { returnObjects: true });
 
   return (
-    <div className="slider-container">
+    <div className="slider-container courses-slider">
       <Slider {...settings}>
         {all_course.map((course, index) => (
           <div key={index} className="course-card">

@@ -25,23 +25,20 @@
 
 .profile-image img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
 }
-
 
 .profile-title {
   margin: 10px 0;
   margin-top: 5rem;
-
   color: hsl(240, 37%, 26%);
 }
-
 
 .profile-details {
   text-align: right;
   margin: 1rem 1rem;
 }
-
 
 .profile-details p {
   font-size: 1.4rem;
@@ -51,9 +48,7 @@
   color: #666;
 }
 
-
-
-
+/* ریسپانسیو برای صفحه‌نمایش */
 @media (max-width: 1200px) {
   .profile-container {
     width: 90%;
@@ -61,10 +56,6 @@
 
   .profile-details p {
     font-size: 1.2rem;
-    text-align: center;
-    direction: rtl !important;
-    margin: 5px 0;
-    color: #666;
   }
 }
 
@@ -72,14 +63,79 @@
   .profile-container {
     width: 90%;
     padding: 20px 5px;
-    
   }
 
   .profile-details p {
     font-size: 1rem;
-    text-align: center;
-    direction: rtl !important;
-    margin: 5px 0;
-    color: #666;
   }
 }
+
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .profile-container {
+    width: 100% ; 
+    margin: 0;
+    padding: 4mm 0 ;
+    box-shadow: none ;
+    position: static ;
+    text-align: center ;
+
+  }
+
+  .profile-image {
+    position: static ;
+    transform: none ;
+    width: 50mm ; 
+    height: auto ;
+    margin: 5mm auto ;
+    padding: 0 ;
+    display: block ;
+    border-radius: 50%;
+    box-shadow: none ;
+    overflow: visible ;
+    background-color: transparent ;
+  }
+
+  .profile-image img {
+    width: 100% ;
+    height: auto ;
+    object-fit: contain ;
+    object-position: center ;
+    display: block ;
+    border-radius: 50% ;
+    margin: 0 auto ;
+    padding: 0 ;
+  }
+  
+  .profile-details .container {
+    width: 100%;
+    padding: 0;
+  }
+  
+  .profile-details .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1mm;
+  }
+  
+  .profile-details [class^="col-"] {
+    padding: 0 0.5mm;
+    width: 50%;
+    float: left;
+    margin: 1mm 0;
+    box-sizing: border-box;
+  }
+  
+  .profile-details p {
+    font-size: 13pt;
+    margin: 1mm 0 0 0;
+    text-align: center;
+    color: #000;
+    line-height: 1.7;
+    direction: rtl;
+  }
+  }

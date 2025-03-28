@@ -177,3 +177,104 @@
 }
 
 
+@media print {
+  .slick-arrow,
+  .slider-arrow,
+  .slick-prev,
+  .slick-next,
+  .slick-dots,
+  .slick-cloned { 
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  .projects-container {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    background: transparent !important;
+  }
+
+  .slick-track {
+    width: 100% !important;
+    display: block !important;
+    transform: none !important;
+    height: auto !important;
+  }
+
+  .slick-list {
+    overflow: visible !important;
+    width: 100% !important;
+  }
+
+  .slick-slide:not(.slick-cloned) {
+    display: block !important;
+    float: left !important;
+    height: auto !important;
+    width: calc(50% - 20px) !important; 
+    box-sizing: border-box !important; 
+    padding: 0 10px !important;
+    margin-bottom: 15px !important;
+    page-break-inside: avoid !important;
+    opacity: 1 !important;
+  }
+
+  .project-box {
+    overflow: visible !important; 
+    border: 2px solid var(--border-color) !important;
+    border-radius: 1rem !important;
+    padding: 18px !important;
+    background-color: var(--background-container-color) !important;
+    color: inherit !important;
+    page-break-inside: avoid;
+    margin-bottom: 12px !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .technologies-list {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+    justify-content: center !important;
+  }
+
+  .technologies-list li {
+    background-color: var(--background-container-color) !important;
+    border: 2px solid #ccc !important;
+    color: #333 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .project-time {
+    display: flex !important;
+    justify-content: space-between !important;
+  }
+
+  .project-box h3 {
+    font-size: 18px !important;
+  }
+
+  .project-box p,
+  .project-box li,
+  .project-time {
+    font-size: 14px !important;
+  }
+
+  .project-box {
+    page-break-inside: avoid !important;
+  }
+  
+
+  @page {
+    margin: 1cm;
+  }
+}
+
+
+

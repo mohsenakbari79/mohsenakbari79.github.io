@@ -1,0 +1,28 @@
+.friendly {
+    width: 210mm !important;
+    margin: 0 auto !important;
+    padding: 10mm 0 !important;
+    box-sizing: border-box !important;
+    direction: inherit !important;
+  }
+  
+.print-friendly * {
+    position: static !important;
+    float: none !important;
+    animation: none !important;
+    width: 100% !important;
+    max-width: 190mm !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .print-friendly .skills-container {
+    display: block !important;
+  }
+  
+  .print-friendly .skill-box {
+    display: inline-block;
+    margin: 5px;
+  } 
+

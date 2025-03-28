@@ -157,3 +157,17 @@
     padding: 0 5px;
   }
 }
+
+@media print {
+ 
+  .courses-slider .slick-slide:not(.slick-cloned)  {
+    width: 33.33% !important;
+    display: inline-block !important;
+    float: none !important;
+    opacity: 1 !important;
+    height: auto !important;
+    page-break-inside: avoid !important;
+  }
+
+  
+}

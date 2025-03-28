@@ -8,6 +8,14 @@ import './CSS/Project.css';
 function Project() {
   const { t } = useTranslation();
 
+  const PrevArrow = ({ slideCount,currentSlide, ...props }) => {
+    return <button className="slider-arrow" {...props}>Prev</button>;
+  };
+  
+  const NextArrow = ({ slideCount,currentSlide, ...props }) => {
+    return <button className="slider-arrow" {...props}>Next</button>;
+  };
+  
   const settings = {
     dots: false,
     infinite: true,
@@ -15,8 +23,8 @@ function Project() {
     slidesToShow: 2,
     slidesToScroll: 1,
     arrows: true,
-    nextArrow: <button className="slider-arrow">Next</button>,
-    prevArrow: <button className="slider-arrow">Prev</button>,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
     responsive: [
       {
         breakpoint: 1024,
@@ -32,7 +40,7 @@ function Project() {
       },
     ],
   };
-
+  
   const projects = t('projects', { returnObjects: true });
 
   return (
@@ -52,7 +60,6 @@ function Project() {
               ))}
             </ul>
             
-            {/* تغییرات برای قرار دادن تاریخ‌ها کنار هم */}
             <div className="project-time">
               <div className="start-date">
                 {t('project.startDate')}: <strong> {project.startDate}</strong>
