@@ -28,7 +28,7 @@
     "tasks_title": "Tasks and Achievement",
     "jobs": [
       {
-        "position": "Software Developer",
+        "position": "Software Developer (Backend & DevOps)",
         "company": "payampardaz company",
         "period": "february 2022 - october 2022",
         "tasks": [
@@ -37,6 +37,17 @@
           "Experienced in working with version control systems like Git and utilizing software development methodologies like Scrum.",
           "Designed and implemented web APIs for front-end communication and used gRPC for low-level system interactions."
         ]
+      },
+      {
+        "position": "Software Engineer (Data Engineer & Backend )",
+        "company": "Anacav",
+        "period": "September 2024 - Present",
+        "tasks": [
+          "Installing, configuring, and managing Apache Kafka along with developing data consumers using Python for receiving, processing, and transferring data.",
+          "Designing, implementing, and managing databases such as PostgreSQL and SingleStore for data storage and retrieval.",
+          "Developing RESTful services using Flask and FastAPI.",
+          "Installing Linux and configuring related infrastructure such as iptables, Nginx, and other necessary tools."
+        ]
       }
     ]
   },
@@ -44,6 +55,7 @@
     "title": "Contact Me",
     "name": "Your Name",
     "email": "Your Email",
+    "phone": "Your phone",
     "message": "Your Message",
     "namePlaceholder": "Enter your name",
     "emailPlaceholder": "Enter your email",
@@ -64,7 +76,7 @@
   "projects": [
     {
       "title": "Shift Supervisor",
-      "description": "In this project, users with different access levels can enter daily information related to their department, and admins can receive various daily, monthly, and production reports. The main challenge was generating complex Excel reports with numerous rows and columns without a consistent structure as per the client's request.",
+      "description": "This project is part of a PDMS (Plant Design Management System), designed for managing and analyzing daily data in an industrial environment. In this system, users with different access levels can enter their daily information related to their respective sections, while admins can generate various daily, monthly, and production reports.",
       "technologies": [
         "Python",
         "Django",

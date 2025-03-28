@@ -8,7 +8,7 @@ module.exports = {
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'public'),
-    publicPath: '/', // این مسیر عمومی رو مشخص می‌کنه
+    publicPath: '/', 
   },
   resolve: {
     extensions: ['.js', '.jsx', '.json'],
@@ -57,7 +57,7 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('development'),
-        PUBLIC_URL: JSON.stringify(''), // یا '/' اگه می‌خواین از ریشه باشه
+        PUBLIC_URL: JSON.stringify(''), 
       },
     }),
   ],
