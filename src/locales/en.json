@@ -44,7 +44,7 @@
         "period": "September 2024 - Present",
         "tasks": [
           "Installing, configuring, and managing Apache Kafka along with developing data consumers using Python for receiving, processing, and transferring data.",
-          "Designing, implementing, and managing databases such as PostgreSQL and SingleStore for data storage and retrieval.",
+          "Designing, implementing, and managing PostgreSQL and SingleStore for data storage and retrieval.",
           "Developing RESTful services using Flask and FastAPI.",
           "Installing Linux and configuring related infrastructure such as iptables, Nginx, and other necessary tools."
         ]
