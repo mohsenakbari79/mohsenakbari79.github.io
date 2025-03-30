@@ -9,7 +9,7 @@ import './CSS/Resume.css';
 function Resume() {
   const { t, i18n } = useTranslation();
   const isRTL = i18n.language === 'fa';
-  const skills = ['python', 'django', 'flask', 'redis', 'SQL', 'react', 'tkinter'];
+  const skills = ['Python', 'Django', 'Flask', 'Redis', 'SQL', 'React.js', 'Tkinter','Kafka','celery'];
   const experiences = t('experience.jobs', { returnObjects: true });
 
   return (
