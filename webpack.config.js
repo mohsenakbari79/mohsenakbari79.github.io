@@ -20,6 +20,12 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx', '.json'],
   },
+  externals: {
+    react: 'React',
+    'react-dom': 'ReactDOM',
+    canvg: 'Canvg',
+    'slick-carousel': 'slick',
+  },
   module: {
     rules: [
       {
@@ -62,19 +68,14 @@ module.exports = {
                 interlaced: false,
               },
               svgo: {
-                plugins: [
-                  {
-                    name: 'removeViewBox',
-                    active: false,
-                  },
-                ],
+                plugins: [{ name: 'removeViewBox', active: false }],
               },
             },
           },
         ],
       },
       {
-        test: /\.woff2?$/,
+        test: /\.woff2$/,
         type: 'asset/resource',
         generator: {
           filename: '[name][ext]',
@@ -98,18 +99,34 @@ module.exports = {
           },
           mangle: true,
         },
+        extractComments: false,
       }),
       new CssMinimizerPlugin(),
     ],
     splitChunks: {
       chunks: 'all',
-      maxSize: 244000, 
+      minSize: 30000,
+      maxInitialRequests: 3,
+      maxAsyncRequests: 5,
+      cacheGroups: {
+        vendors: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all',
+          priority: -10,
+        },
+        default: {
+          minChunks: 2,
+          priority: -20,
+          reuseExistingChunk: true,
+        },
+      },
     },
     runtimeChunk: 'single',
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './public/index.html',
+      template: path.resolve(__dirname, 'public', 'index.html'),
       minify: {
         removeComments: true,
         collapseWhitespace: true,
@@ -133,7 +150,7 @@ module.exports = {
           from: path.resolve(__dirname, 'public'),
           to: path.resolve(__dirname, 'public'),
           globOptions: {
-            ignore: ['**/index.html'],
+            ignore: ['**/index.html', '**/*.gz', '**/report.html'],
           },
         },
       ],
@@ -151,8 +168,7 @@ module.exports = {
       },
     }),
     new BundleAnalyzerPlugin({
-      analyzerMode: 'static',
-      openAnalyzer: false, 
+      analyzerMode: 'disabled',
     }),
   ],
   ignoreWarnings: [/Failed to parse source map/],
