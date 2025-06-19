@@ -14,15 +14,13 @@ module.exports = {
   output: {
     filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'public'),
-    publicPath: '/',
+    publicPath: '/', // برای GitHub Pages، اگر نیاز است به '/mohsenakbari79/' تغییر دهید
     clean: true,
   },
   resolve: {
     extensions: ['.js', '.jsx', '.json'],
   },
   externals: {
-    react: 'React',
-    'react-dom': 'ReactDOM',
     canvg: 'Canvg',
     'slick-carousel': 'slick',
   },
@@ -47,7 +45,7 @@ module.exports = {
         test: /\.(png|jpg|jpeg|gif|svg)$/,
         type: 'asset/resource',
         generator: {
-          filename: '[name][ext]',
+          filename: 'assets/images/[name][ext]',
         },
         use: [
           {
@@ -78,7 +76,7 @@ module.exports = {
         test: /\.woff2$/,
         type: 'asset/resource',
         generator: {
-          filename: '[name][ext]',
+          filename: 'assets/fonts/[name][ext]',
         },
       },
       {
@@ -94,8 +92,7 @@ module.exports = {
       new TerserPlugin({
         terserOptions: {
           compress: {
-            drop_console: true,
-            pure_funcs: ['console.info', 'console.debug', 'console.warn'],
+            drop_console: false, // برای دیباگ فعال نگه داشته شده
           },
           mangle: true,
         },
