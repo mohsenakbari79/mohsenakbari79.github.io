@@ -23,99 +23,108 @@ function Header({ changeLanguage, activeLang }) {
       const styleElement = document.createElement('style');
       styleElement.innerHTML = `
         ${printStyles}
-       .slick-track {
+        .projects-container {
+          padding: 0 !important;
+          margin: 0 !important;
+          width: 100% !important;
+          background: transparent !important;
+        }
+        .slick-track {
           width: 100% !important;
           display: block !important;
           transform: none !important;
           height: auto !important;
+          margin: 0 !important; /* حذف فاصله اضافی */
         }
         .slick-list {
           overflow: visible !important;
           width: 100% !important;
+          margin: 0 !important; /* حذف فاصله اضافی */
+          padding: 0 !important; /* حذف پدینگ اضافی */
         }
         .slick-slide:not(.slick-cloned) {
           display: block !important;
           float: left !important;
           height: auto !important;
-          width: calc(48% - 22px) !important;
+          width: calc(50% - 25px) !important; /* کاهش فاصله بین ستون‌ها */
           box-sizing: border-box !important;
-          padding: 0 10px !important;
-          margin-bottom: 15px !important;
+          padding: 0 4px !important; /* کاهش پدینگ */
+          margin: 0 4px 4px 0 !important; /* کاهش فاصله عمودی و افقی */
           opacity: 1 !important;
           min-height: 1px !important;
+          page-break-inside: avoid !important;
+          break-inside: avoid !important;
         }
-        .courses-slider .slick-slide:not(.slick-cloned) {
-          display: block !important;
-          float: left !important;
-          height: auto !important;
-          width: calc(33.33% - 20px) !important;
-          box-sizing: border-box !important;
-          padding: 0 !important;
-          margin: 0 10px 15px 0 !important;
-          opacity: 1 !important;
-          min-height: 1px !important;
+        .project-box {
+          page-break-inside: avoid !important;
+          break-inside: avoid !important;
+          overflow: visible !important;
+          border: 2px solid var(--border-color) !important;
+          border-radius: 1rem !important;
+          padding: 8px !important; /* کاهش پدینگ داخلی */
+          margin: 0 !important; /* حذف حاشیه اضافی */
+          background-color: var(--background-container-color) !important;
+          color: inherit !important;
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+         
         }
-        /* clearfix برای چیدمان دو ستونی */
+        .project-box h3 {
+          font-size: 14px !important; /* کاهش اندازه فونت عنوان */
+          margin: 4px 0 !important; /* کاهش فاصله */
+        }
+        .project-box p {
+          margin: 4px 0 !important; /* کاهش فاصله پاراگراف‌ها */
+          font-size: 12px !important; /* کاهش اندازه فونت */
+        }
+        .technologies-list {
+          gap: 4px !important; /* کاهش فاصله بین آیتم‌ها */
+          margin: 4px 0 !important; /* کاهش فاصله عمودی */
+        }
+        .technologies-list li {
+          padding: 4px 8px !important; /* کاهش پدینگ */
+          font-size: 10px !important; /* کاهش اندازه فونت */
+        }
+        .project-time {
+          margin: 4px 0 !important; /* کاهش فاصله */
+          font-size: 10px !important; /* کاهش اندازه فونت */
+        }
         .slick-track::after {
           content: "";
           display: block;
           clear: both !important;
           height: 0 !important;
         }
-        .resume-container h1 {
-          page-break-inside: avoid !important;
-          break-inside: avoid !important;
-          overflow: hidden !important;
+          .resume-container h1 {
+
           padding: 1rem 3rem;
-          margin-bottom: 14px;
-        }
-        .courses-slider {
-          margin-top: 0 !important;
-          padding-top: 0 !important;
-        }
-        .experience-box {
-          text-align: center !important;
-          font-family: 'Vazir', 'Tahoma', sans-serif !important;
-          ${activeLang === 'fa' ? `
-            direction: rtl !important;
-            unicode-bidi: embed !important;
-          ` : `
-            direction: ltr !important;
-            unicode-bidi: normal !important;
-          `}
-        }
-        [lang="en"] {
-          direction: ltr !important;
-          unicode-bidi: embed !important;
-          display: inline !important;
+          margin: 1.2rem;
         }
       `;
       document.head.appendChild(styleElement);
   
-      // 2. معکوس کردن پرانتزها فقط برای زبان فارسی
+      // بقیه کد بدون تغییر
       const experienceBoxes = element.querySelectorAll('.experience-box');
       const originalTexts = [];
       if (activeLang === 'fa') {
         experienceBoxes.forEach((box, index) => {
           originalTexts[index] = box.innerHTML;
-          // معکوس کردن پرانتزها با یونیکد
           box.innerHTML = box.innerHTML
             .replace(/\(/g, '\u200E)')
             .replace(/\)/g, '(\u200E');
         });
       }
   
-      // 3. تنظیم اسلایدها
       const slickSlides = element.querySelectorAll('.slick-slide:not(.slick-cloned)');
       const originalStyles = [];
       slickSlides.forEach((slide, index) => {
         originalStyles[index] = slide.style.cssText;
         slide.style.opacity = '1';
         slide.style.display = 'block';
-        slide.style.width = 'calc(50% - 20px)';
+        slide.style.width = 'calc(50% - 8px)';
         slide.style.float = 'left';
         slide.style.height = 'auto';
-        slide.style.margin = '0 10px 15px 0';
+        slide.style.margin = '0 4px 4px 0';
         slide.style.boxSizing = 'border-box';
         slide.style.minHeight = '1px';
       });
@@ -129,9 +138,8 @@ function Header({ changeLanguage, activeLang }) {
       slickList.style.overflow = 'visible';
       slickList.style.width = '100%';
   
-      // 4. تنظیمات html2pdf
       const opt = {
-        margin: [10, 5, 10, 5],
+        margin: [5, 5, 5, 5],
         filename: 'Mohsen_Akbari_Resume.pdf',
         image: { type: 'jpeg', quality: 1 },
         html2canvas: {
@@ -140,7 +148,7 @@ function Header({ changeLanguage, activeLang }) {
           letterRendering: true,
           width: 794,
           windowWidth: 794,
-          windowHeight: slickTrack.scrollHeight + 50,
+          windowHeight: 1123,
           logging: true,
           imageTimeout: 15000,
           backgroundColor: '#FFFFFF',
@@ -156,7 +164,6 @@ function Header({ changeLanguage, activeLang }) {
         await new Promise((resolve) => setTimeout(resolve, 50));
         await html2pdf().set(opt).from(element).save();
       } finally {
-        // 5. بازگرداندن تغییرات
         if (activeLang === 'fa') {
           experienceBoxes.forEach((box, index) => {
             box.innerHTML = originalTexts[index];

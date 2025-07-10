@@ -2,6 +2,17 @@
   margin-top: 20px;
   padding: 20px;
 }
+.client-link {
+  color: rgba(0, 29, 72, 0.87) !important;
+  text-decoration: none !important;
+}
+.client-link:hover {
+  text-decoration: underline;
+}
+.project-description{
+  text-align: justify !important;
+  direction: rtl;
+}
 
 .project-box {
   border: 2px solid var(--border-color);

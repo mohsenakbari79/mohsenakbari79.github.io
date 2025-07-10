@@ -50,9 +50,12 @@ function Project() {
           <div key={index} className="project-box">
             <h3>{project.title}</h3>
             <p>
-              <strong>{t('project.client')}:</strong> {project.client}
+              <strong>{t('project.client')}:</strong>{' '}
+              <a className='client-link' href={project.urls} target="_blank" rel="noopener noreferrer">
+                {project.client}
+              </a>
             </p>
-            <p>{project.description}</p>
+            <p className='project-description'>{project.description}</p>
             <h4>{t('project.technologiesUsed')}</h4>
             <ul className="technologies-list">
               {project.technologies.map((tech, i) => (

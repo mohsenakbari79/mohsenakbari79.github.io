@@ -75,6 +75,23 @@
   },
   "projects": [
     {
+      "title": "Client Management Website",
+      "urls": "https://vakilehsanamini.ir/",
+      "description": "This project is a management website for a law office, including client management, case tracking, and notifications. The lawyer can record and track client and case details. It also supports SMS alerts for updates and internal notifications for hearings and case progress.",
+      "technologies": [
+        "Django",
+        "React",
+        "js",
+        "PostgreSQL",
+        "REST",
+        "Docker",
+        "Nginx"
+      ],
+      "client": "Ehsan Amini",
+      "startDate": "2025-04-08",
+      "endDate": "2025-05-31"
+    },
+    {
       "title": "Shift Supervisor",
       "description": "This project is part of a PDMS (Plant Design Management System), designed for managing and analyzing daily data in an industrial environment. In this system, users with different access levels can enter their daily information related to their respective sections, while admins can generate various daily, monthly, and production reports.",
       "technologies": [
