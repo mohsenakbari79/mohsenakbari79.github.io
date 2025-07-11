@@ -28,3 +28,6 @@ yarn-error.log*
 /public/*.css.gz
 /public/*.js
 /public/*.css
+/public/*.woff
+/public/*.eot
+/public/*.ttf
