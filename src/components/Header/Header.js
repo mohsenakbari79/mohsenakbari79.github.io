@@ -98,7 +98,7 @@ function Header({ changeLanguage, activeLang }) {
           .resume-container h1 {
 
           padding: 1rem 3rem;
-          margin: 0.9rem;
+          margin: 0.8rem;
         }
       `;
       document.head.appendChild(styleElement);
