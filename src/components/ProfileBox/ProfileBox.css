@@ -75,10 +75,11 @@
     margin: 0;
     padding: 0;
   }
+  
 
   .profile-container {
     width: 100% ; 
-    margin: 0;
+    margin: -4mm !important;
     padding: 4mm 0 ;
     box-shadow: none ;
     position: static ;
@@ -89,9 +90,9 @@
   .profile-image {
     position: static ;
     transform: none ;
-    width: 50mm ; 
+    width: 38mm ; 
     height: auto ;
-    margin: 5mm auto ;
+    margin: 3mm auto ;
     padding: 0 ;
     display: block ;
     border-radius: 50%;
@@ -110,7 +111,15 @@
     margin: 0 auto ;
     padding: 0 ;
   }
-  
+  .profile-title {
+    margin-top: 4mm;
+  }
+  .profile-title h1 {
+    font-size: 22pt !important;
+  }
+  .profile-title h2 {
+    font-size: 20pt !important;
+  }
   .profile-details .container {
     width: 100%;
     padding: 0;

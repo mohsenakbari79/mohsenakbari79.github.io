@@ -11,7 +11,7 @@ function Resume() {
   const isRTL = i18n.language === 'fa';
   const skills = ['Python', 'Django', 'Flask', 'Redis', 'SQL', 'React.js', 'Tkinter','Docker','Celery','Kafka'];
   const experiences = t('experience.jobs', { returnObjects: true });
-
+  const education = t('education.degrees', { returnObjects: true });
   return (
     <div className='resume-container'>
       <div className={`about-me-container ${isRTL ? 'rtl' : ''}`}>
@@ -19,6 +19,16 @@ function Resume() {
         <p >
           {t('about_me.summary')}
         </p>
+      </div>
+      <div className="resume-container">
+        <h1>{t('education.title')}</h1>
+        {education.map((edu, index) => (
+          <div key={index} className="education-box my-4 rounded">
+            <h3 className="degree">{edu.degree}</h3>
+            <h5 className="university">{edu.university}</h5>
+            <p className="period">{edu.start_year} - {edu.end_year}</p>
+          </div>
+        ))}
       </div>
       <div className="resume-container">
         <h1>{t('social_media.title')}</h1>

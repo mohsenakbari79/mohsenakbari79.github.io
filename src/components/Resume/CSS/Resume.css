@@ -335,6 +335,27 @@
         /* height: auto !important; اطمینان از ارتفاع طبیعی */
         /* overflow: hidden !important; جلوگیری از سرریز شدن */
       }
+      .education-box {
+        padding: 0 !important;
+        margin-top: 2mm !important;
+      }
+    
+      .education-box h3 {
+        font-size: 11pt;
+      }
+      .education-box h5,
+      .education-box p {
+        font-size: 9pt;
+      }
+      .social-icons a {
+        font-size: 14mm;
+        margin: 0 0.5rem;
+    }
+
+      .social-icons-img{
+        max-width: 19mm !important; 
+        max-height:17mm !important ;
+    }
     
     /* .resume-container{
         page-break-inside: avoid;

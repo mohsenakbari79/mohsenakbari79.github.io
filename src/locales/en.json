@@ -15,8 +15,19 @@
   },
   "about_me": {
     "title": "about me",
-    "summary": "I am a programmer interested in learning modern skills and technologies in software development. My journey began at university with C and C++, and later I was drawn to Python for its simplicity and power. Now, as a full-stack developer, I strive to expand my knowledge and experience by building modern and practical software."
+    "summary": "I am a programmer interested in learning modern skills and technologies in software development. My journey began at university with C and C++, and later I was drawn to Python for its simplicity and power. Since then, I have continued to explore different aspects of software development. Now, as a full-stack developer, I strive to expand my knowledge and experience by building modern and practical software applications."
   },
+  "education": {
+  "title": "Education",
+  "degrees": [
+        {
+          "degree": "Bachelor of Computer Engineering",
+          "university": "Kashan University",
+          "start_year": "2018",
+          "end_year": "2022"
+        }
+      ]
+    },
   "social_media": {
     "title": "social media"
   },
@@ -34,7 +45,7 @@
         "tasks": [
           "Backend developer using Django and Python...",
           "Designed and implemented databases using PostgreSQL and Redis.",
-          "Experienced in working with version control systems like Git and utilizing software development methodologies like Scrum.",
+          "Experienced in using version control systems like Git and software development methodologies like Scrum.",
           "Designed and implemented web APIs for front-end communication and used gRPC for low-level system interactions."
         ]
       },

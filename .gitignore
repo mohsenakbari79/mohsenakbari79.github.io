@@ -31,3 +31,4 @@ yarn-error.log*
 /public/*.woff
 /public/*.eot
 /public/*.ttf
+/public/report.html
