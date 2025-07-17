@@ -55,6 +55,39 @@ function Header({ changeLanguage, activeLang }) {
           page-break-inside: avoid !important;
           break-inside: avoid !important;
         }
+          .profile-image {
+          position: static ;
+          transform: none ;
+          width: 38mm ; 
+          height: auto ;
+          margin: 3mm auto ;
+          padding: 0 ;
+          display: block ;
+          border-radius: 50%;
+          box-shadow: none ;
+          overflow: visible ;
+          background-color: transparent ;
+        }
+
+        .profile-image img {
+          width: 100% ;
+          height: auto ;
+          object-fit: contain ;
+          object-position: center ;
+          display: block ;
+          border-radius: 50% ;
+          margin: 0 auto ;
+          padding: 0 ;
+        }
+        .profile-title {
+          margin-top: 4mm;
+        }
+        .profile-title h1 {
+          font-size: 22pt !important;
+        }
+        .profile-title h2 {
+          font-size: 20pt !important;
+        }
         .project-box {
           page-break-inside: avoid !important;
           break-inside: avoid !important;
@@ -100,6 +133,27 @@ function Header({ changeLanguage, activeLang }) {
           padding: 1rem 3rem;
           margin: 1rem;
         }
+          .education-box {
+        padding: 0 !important;
+        margin-top: 2mm !important;
+      }
+    
+      .education-box h3 {
+        font-size: 11pt;
+      }
+      .education-box h5,
+      .education-box p {
+        font-size: 9pt;
+      }
+      .social-icons a {
+        font-size: 14mm;
+        margin: 0 0.5rem;
+    }
+
+      .social-icons-img{
+        max-width: 19mm !important; 
+        max-height:17mm !important ;
+    }
       `;
       document.head.appendChild(styleElement);
   
