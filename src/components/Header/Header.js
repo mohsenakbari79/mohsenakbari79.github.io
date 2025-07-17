@@ -68,6 +68,15 @@ function Header({ changeLanguage, activeLang }) {
           overflow: visible ;
           background-color: transparent ;
         }
+        .profile-container {
+          width: 100% ; 
+          margin: -4mm !important;
+          padding: 4mm 0 ;
+          box-shadow: none ;
+          position: static ;
+          text-align: center ;
+
+          }
 
         .profile-image img {
           width: 100% ;
