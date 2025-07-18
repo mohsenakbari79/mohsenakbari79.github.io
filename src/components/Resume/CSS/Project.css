@@ -2,16 +2,36 @@
   margin-top: 20px;
   padding: 20px;
 }
+
 .client-link {
   color: rgba(0, 29, 72, 0.87) !important;
   text-decoration: none !important;
 }
+
 .client-link:hover {
   text-decoration: underline;
 }
-.project-description{
-  text-align: justify !important;
+
+.description-list {
+  text-align: left !important;
+  direction: ltr;
+  padding-left: 20px;
+  margin: 10px 0;
+  list-style-position: inside;
+}
+
+.description-list.rtl {
+  text-align: right !important;
   direction: rtl;
+  padding-right: 20px;
+  padding-left: 0;
+}
+
+.description-list li {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  color: #333;
 }
 
 .project-box {
@@ -22,7 +42,7 @@
   text-align: center;
   border-radius: 2rem 1rem !important;
   position: relative;
-  overflow: hidden; /* جلوگیری از بیرون زدن تاریخ */
+  overflow: hidden;
 }
 
 .slick-prev,
@@ -64,10 +84,9 @@
   transform: translateY(-5px);
 }
 
-/* استایل برای تاریخ شروع و پایان پروژه */
 .project-time {
   display: flex;
-  justify-content: space-between; /* تاریخ‌ها کنار هم با فاصله مناسب */
+  justify-content: space-between;
   padding: 10px;
   font-size: 14px;
   color: #333;
@@ -79,115 +98,121 @@
   color: #333;
 }
 
-/* Media Query برای اندازه‌های مختلف صفحه */
 @media (max-width: 1024px) {
   .projects-container {
-    padding: 15px;
+      padding: 15px;
   }
 
   .project-box {
-    padding: 15px;
+      padding: 15px;
   }
 
-
-  
   .slick-slide {
-    padding: 0 8px;
+      padding: 0 8px;
   }
 
   .technologies-list li {
-    font-size: 0.85rem;
-    padding: 8px 12px;
-    min-width: 80px;
+      font-size: 0.85rem;
+      padding: 8px 12px;
+      min-width: 80px;
+  }
+
+  .description-list li {
+      font-size: 0.85rem;
   }
 }
 
-/* Media Query برای اندازه صفحه‌های کوچک‌تر */
 @media (max-width: 800px) {
   .projects-container {
-    padding: 10px;
+      padding: 10px;
   }
 
   .project-box {
-    padding: 10px;
-    font-size: 0.8rem;
+      padding: 10px;
+      font-size: 0.8rem;
   }
+
   .project-box h4 {
-    padding: 10px;
-    font-size: 0.8rem;
+      padding: 10px;
+      font-size: 0.8rem;
   }
 
   .slick-prev,
   .slick-next {
-    display: none;
+      display: none;
   }
 
   .slick-slide {
-    padding: 0 5px;
+      padding: 0 5px;
   }
 
   .technologies-list li {
-    font-size: 0.8rem;
-    padding: 5px 8px;
-    min-width: 1rem;
+      font-size: 0.8rem;
+      padding: 5px 8px;
+      min-width: 1rem;
   }
 
-  /* استایل برای تاریخ شروع و پایان در اندازه صفحه‌های کوچک‌تر */
+  .description-list li {
+      font-size: 0.8rem;
+  }
+
   .project-time {
-    font-size: 12px;
-    padding: 0 5px;
+      font-size: 12px;
+      padding: 0 5px;
   }
 
   .start-date,
   .end-date {
-    font-size: 0.7rem;
-    font-weight: normal;
+      font-size: 0.7rem;
+      font-weight: normal;
   }
 }
 
 @media (max-width: 480px) {
   .projects-container {
-    padding: 1rem;
-    
+      padding: 1rem;
   }
 
   .project-box {
-    padding: 8px;
-    font-size: 0.7rem;
-    border-radius: 1rem;
+      padding: 8px;
+      font-size: 0.7rem;
+      border-radius: 1rem;
   }
 
   .project-box h4 {
-    font-size: 0.7rem;
-    margin-bottom: 5px;
+      font-size: 0.7rem;
+      margin-bottom: 5px;
   }
 
   .technologies-list {
-    gap: 5px;
+      gap: 5px;
   }
 
   .technologies-list li {
-    font-size: 0.7rem;
-    padding: 4px 6px;
-    min-width: 60px;
-    border-radius: 5px;
+      font-size: 0.7rem;
+      padding: 4px 6px;
+      min-width: 60px;
+      border-radius: 5px;
+  }
+
+  .description-list li {
+      font-size: 0.7rem;
   }
 
   .project-time {
-    font-size: 0.6rem;
-    padding: 5px 0;
+      font-size: 0.6rem;
+      padding: 5px 0;
   }
 
   .start-date,
   .end-date {
-    font-size: 0.6rem;
+      font-size: 0.6rem;
   }
 
   .slick-slide {
-    padding: 0 3px;
+      padding: 0 3px;
   }
 }
-
 
 @media print {
   .slick-arrow,
@@ -195,98 +220,115 @@
   .slick-prev,
   .slick-next,
   .slick-dots,
-  .slick-cloned { 
-    display: none !important;
+  .slick-cloned {
+      display: none !important;
   }
 
   body {
-    background: white !important;
-    color: black !important;
+      background: white !important;
+      color: black !important;
   }
 
   .projects-container {
-    padding: 0 !important;
-    margin: 0 !important;
-    width: 100% !important;
-    background: transparent !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      width: 100% !important;
+      background: transparent !important;
   }
 
   .slick-track {
-    width: 100% !important;
-    display: block !important;
-    transform: none !important;
-    height: auto !important;
+      width: 100% !important;
+      display: block !important;
+      transform: none !important;
+      height: auto !important;
   }
 
   .slick-list {
-    overflow: visible !important;
-    width: 100% !important;
+      overflow: visible !important;
+      width: 100% !important;
   }
 
   .slick-slide:not(.slick-cloned) {
-    display: block !important;
-    float: left !important;
-    height: auto !important;
-    width: calc(50% - 20px) !important; 
-    box-sizing: border-box !important; 
-    padding: 0 10px !important;
-    margin-bottom: 15px !important;
-    page-break-inside: avoid !important;
-    opacity: 1 !important;
+      display: block !important;
+      float: left !important;
+      height: auto !important;
+      width: calc(50% - 20px) !important;
+      box-sizing: border-box !important;
+      padding: 0 10px !important;
+      margin-bottom: 15px !important;
+      page-break-inside: avoid !important;
+      opacity: 1 !important;
   }
 
   .project-box {
-    overflow: visible !important; 
-    border: 2px solid var(--border-color) !important;
-    border-radius: 1rem !important;
-    padding: 18px !important;
-    background-color: var(--background-container-color) !important;
-    color: inherit !important;
-    page-break-inside: avoid;
-    margin-bottom: 12px !important;
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
+      overflow: visible !important;
+      border: 2px solid var(--border-color) !important;
+      border-radius: 1rem !important;
+      padding: 18px !important;
+      background-color: var(--background-container-color) !important;
+      color: inherit !important;
+      page-break-inside: avoid;
+      margin-bottom: 12px !important;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+  }
+
+  .description-list {
+      text-align: left !important;
+      direction: ltr;
+      padding-left: 5mm;
+      margin: 5mm 0;
+      list-style-position: inside;
+  }
+
+  .description-list.rtl {
+      text-align: right !important;
+      direction: rtl;
+      padding-right: 5mm;
+      padding-left: 0;
+  }
+
+  .description-list li {
+      font-size: 14px !important;
+      line-height: 1.5;
+      margin-bottom: 0.5rem;
   }
 
   .technologies-list {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    gap: 10px !important;
-    justify-content: center !important;
+      display: flex !important;
+      flex-wrap: wrap !important;
+      gap: 10px !important;
+      justify-content: center !important;
   }
 
   .technologies-list li {
-    background-color: var(--background-container-color) !important;
-    border: 2px solid #ccc !important;
-    color: #333 !important;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
+      background-color: var(--background-container-color) !important;
+      border: 2px solid #ccc !important;
+      color: #333 !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
   }
 
   .project-time {
-    display: flex !important;
-    justify-content: space-between !important;
+      display: flex !important;
+      justify-content: space-between !important;
   }
 
   .project-box h3 {
-    font-size: 18px !important;
+      font-size: 18px !important;
   }
 
   .project-box p,
   .project-box li,
   .project-time {
-    font-size: 14px !important;
+      font-size: 14px !important;
   }
 
   .project-box {
-    page-break-inside: avoid !important;
+      page-break-inside: avoid !important;
   }
-  
 
   @page {
-    margin: 1cm;
+      margin: 1cm;
   }
 }
-
-
-

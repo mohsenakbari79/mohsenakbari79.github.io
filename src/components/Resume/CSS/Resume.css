@@ -14,13 +14,10 @@
     margin-bottom: 1rem;
 }
 
-
 .about-me-container {
     border-radius: 10px;
     text-align: center;
 }
-
-
 
 .about-me-container p {
     font-size: 1.5rem;
@@ -41,7 +38,6 @@
 
 
 
-
 .skills-container {
     display: flex;
     flex-wrap: wrap;
@@ -57,14 +53,14 @@
     transition: color 0.3s ease;
 }
 
-.social-icons-img{
+.social-icons-img {
     max-width: 2em;
-    max-height:1.2em ;
+    max-height: 1.2em;
 }
+
 .social-icons a:hover {
     color: #0056b3;
 }
-
 
 .skill-box {
     border: 2px solid var(--border-color);
@@ -78,19 +74,11 @@
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* 
-.skill-box:hover {
-    background-color: #007bff;
-    color: white;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-} */
-
-
 .experience-box {
     border: 2px solid var(--border-color);
     border-radius: 1rem;
     padding: 20px;
-    background-color: var(--background-container-color);;
+    background-color: var(--background-container-color);
     text-align: center;
     box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.356);
     border-radius: 4rem !important;
@@ -125,11 +113,9 @@
     text-align: right;
 }
 
-
 .tasks-list li {
     line-height: 1.6;
 }
-
 
 @media (max-width: 1024px) {
     .resume-container {
@@ -139,16 +125,13 @@
         text-align: center;
         margin-top: 2rem;
     }
-    .about-me-container p {
+    .about-me-container ul {
         font-size: 1.4rem;
         line-height: 1.4;
         padding: 1rem;
         color: #333;
     }
-
 }
-
-
 
 @media (max-width: 800px) {
     .resume-container {
@@ -162,47 +145,38 @@
     .resume-container h1 {
         font-size: 1.4rem;
         padding: 1rem 2rem;
-
     }
 
     .skill-box {
         padding: 7px 9px;
         width: 80px;
         font-size: 1.2rem;
-
     }
 
-    .about-me-container p {
+    .about-me-container ul {
         font-size: 1rem;
         line-height: 1.4;
         padding: 1rem;
         color: #333;
     }
 
-    /* experience-box */
-
-    .experience-box{
+    .experience-box {
         padding: 2rem 0 !important;
     }
-    .experience-box h2{
+    .experience-box h2 {
         font-size: 1.2rem;
         font-weight: 500;
-
     }
-    .experience-box h5{
+    .experience-box h5 {
         font-size: 1rem;
-
     }
-    .experience-box p{
+    .experience-box p {
         font-size: 0.8rem;
-
     }
-    .experience-box li{
+    .experience-box li {
         font-size: 0.8rem;
-
     }
 }
-
 
 @media (max-width: 480px) {
     .resume-container {
@@ -216,8 +190,8 @@
         padding: 0.8rem 1.5rem;
         border-bottom: 3px solid var(--line-color);
     }
-   
-    .about-me-container p {
+
+    .about-me-container ul {
         font-size: 0.9rem;
         line-height: 1.3;
         padding: 0.5rem;
@@ -244,7 +218,6 @@
         max-height: 1em;
     }
 
-    /* تجربه‌های کاری */
     .experience-box {
         padding: 1rem 0.5rem !important;
         border-radius: 2rem !important;
@@ -276,92 +249,84 @@
     }
 }
 
-
 @media print {
     .resume-container {
-      width: 210mm;
-      margin: 0 auto;
-      padding: 9mm !important ;
-      text-align: center;
+        width: 210mm;
+        margin: 0 auto;
+        padding: 9mm !important;
+        text-align: center;
     }
-  
+
     .about-me-container p {
-      width: 200mm;
-      font-size: 11pt;
-      line-height: 2.1;
-      padding: 0;
-      margin: 0 auto;
-      text-align: justify;
-      text-align-last: center;
-    }
-  
+        width: 200mm;
+        font-size: 11pt;
+        line-height: 2.1;
+        padding: 0;
+        margin: 0 auto;
+        text-align: justify;
+        text-align-last: center;
+      }  
+
     .skills-container {
-      display: block; 
-      width: 190mm;
-      /* margin: 15mm auto 0 auto ; */
+        display: block;
+        width: 190mm;
     }
-  
+
     .skill-box {
-      display: inline-block;
-      width: 30mm; 
-      margin: 2mm;
-      padding: 1mm;
-      font-size: 10pt;
-      box-shadow: none; 
+        display: inline-block;
+        width: 30mm;
+        margin: 2mm;
+        padding: 1mm;
+        font-size: 10pt;
+        box-shadow: none;
     }
-  
+
     .experience-box {
-      width: 190mm;
-      margin: 10mm auto;
-      padding: 5mm;
-      box-shadow: none;
-      border-radius: 0; 
+        width: 190mm;
+        margin: 10mm auto;
+        padding: 5mm;
+        box-shadow: none;
+        border-radius: 0;
     }
-  
+
     .tasks-list {
-      width: 180mm;
-      margin: 5mm auto;
-      padding-left: 5mm;
+        width: 180mm;
+        margin: 5mm auto;
+        padding-left: 5mm;
     }
-  
+
     .tasks-list.rtl {
-      padding-right: 5mm;
-      padding-left: 0;
+        padding-right: 5mm;
+        padding-left: 0;
     }
+
     .resume-container h1 {
         page-break-inside: avoid !important;
         break-inside: avoid !important;
         page-break-after: avoid !important;
-        /* height: auto !important; اطمینان از ارتفاع طبیعی */
-        /* overflow: hidden !important; جلوگیری از سرریز شدن */
-      }
-      .education-box {
+    }
+
+    .education-box {
         padding: 0 !important;
         margin-top: 2mm !important;
-      }
-    
-      .education-box h3 {
+    }
+
+    .education-box h3 {
         font-size: 11pt;
-      }
-      .education-box h5,
-      .education-box p {
+    }
+
+    .education-box h5,
+    .education-box p {
         font-size: 9pt;
-      }
-      .social-icons a {
+    }
+
+    .social-icons a {
         font-size: 14mm;
         margin: 0 0.5rem;
     }
 
-      .social-icons-img{
-        max-width: 19mm !important; 
-        max-height:17mm !important ;
+    .social-icons-img {
+        max-width: 19mm !important;
+        max-height: 17mm !important;
     }
-    
-    /* .resume-container{
-        page-break-inside: avoid;
-    } */
-    /* .experience-box {
-        page-break-inside: avoid;
-      } */
-  }
-  
+}

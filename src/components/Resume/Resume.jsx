@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { useTranslation } from 'react-i18next';
 import { FaGithub, FaTelegramPlane } from 'react-icons/fa';
 import Project from './Project';
@@ -9,9 +8,10 @@ import './CSS/Resume.css';
 function Resume() {
   const { t, i18n } = useTranslation();
   const isRTL = i18n.language === 'fa';
-  const skills = ['Python', 'Django', 'Flask', 'Redis', 'SQL', 'React.js', 'Tkinter','Docker','Celery','Kafka'];
+  const skills = ['Python', 'Django', 'Flask', 'Redis', 'SQL', 'React.js', 'Tkinter', 'Docker', 'Celery', 'Kafka'];
   const experiences = t('experience.jobs', { returnObjects: true });
   const education = t('education.degrees', { returnObjects: true });
+
   return (
     <div className='resume-container'>
       <div className={`about-me-container ${isRTL ? 'rtl' : ''}`}>
@@ -54,7 +54,6 @@ function Resume() {
           ))}
         </div>
       </div>
-
       <div className="resume-container">
         <h1>{t('experience.title')}</h1>
         {experiences.map((exp, index) => (
@@ -71,8 +70,6 @@ function Resume() {
           </div>
         ))}
       </div>
-
-      {/* پروژه‌ها */}
       <div className="resume-container">
         <h1>{t('project.title')}</h1>
         <Project />
@@ -81,7 +78,6 @@ function Resume() {
         <h1>{t('courses.title')}</h1>
         <Courses />
       </div>
-
     </div>
   );
 }

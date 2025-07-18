@@ -1,73 +1,74 @@
 {
   "header": {
-    "title": "My Resume",
+    "title": "My Professional Portfolio",
     "language": "Language"
   },
   "profile": {
-    "name": "mohsen akbari",
-    "expertise": "programmer",
-    "phone": "Phone: 09130330624",
+    "name": "Mohsen Akbari",
+    "expertise": "Full-Stack Developer",
+    "phone": "Phone: +989130330624",
     "email": "Email: malevin2020@gmail.com",
     "marital_status": "Marital Status: Single",
-    "military_service": "Military Service : served",
-    "address": "Address: isfahan,iran",
+    "military_service": "Military Service: Completed",
+    "address": "Address: Isfahan, Iran",
     "birthday": "Birthday: 2000/07/31"
   },
   "about_me": {
-    "title": "about me",
-    "summary": "I am a programmer interested in learning modern skills and technologies in software development. My journey began at university with C and C++, and later I was drawn to Python for its simplicity and power. Since then, I have continued to explore different aspects of software development. Now, as a full-stack developer, I strive to expand my knowledge and experience by building modern and practical software applications."
+    "title": "Professional Summary",
+    "summary": "Experienced full-stack developer with expertise in Python, Django, and React. Strong foundation in systems programming combined with modern web development practices. Passionate about building scalable applications, optimizing database performance, and implementing efficient solutions across the development stack."
   },
   "education": {
-  "title": "Education",
-  "degrees": [
-        {
-          "degree": "Bachelor of Computer Engineering",
-          "university": "Kashan University",
-          "start_year": "2018",
-          "end_year": "2022"
-        }
-      ]
-    },
+    "title": "Education",
+    "degrees": [
+      {
+        "degree": "Bachelor of Computer Engineering",
+        "university": "Kashan University",
+        "specialization": "Software Engineering & Database Systems",
+        "start_year": "2018",
+        "end_year": "2022"
+      }
+    ]
+  },
   "social_media": {
-    "title": "social media"
+    "title": "Professional Profiles"
   },
   "skills": {
-    "title": "Skills"
+    "title": "Technical Expertise"
   },
   "experience": {
-    "title": "Work Experience",
-    "tasks_title": "Tasks and Achievement",
+    "title": "Professional Experience",
+    "tasks_title": "Key Responsibilities & Achievements",
     "jobs": [
       {
         "position": "Software Developer (Backend & DevOps)",
-        "company": "payampardaz company",
-        "period": "february 2022 - october 2022",
+        "company": "Payampardaz Company",
+        "period": "2022/01 - 2022/10",
         "tasks": [
-          "Backend developer using Django and Python...",
-          "Designed and implemented databases using PostgreSQL and Redis.",
-          "Experienced in using version control systems like Git and software development methodologies like Scrum.",
-          "Designed and implemented web APIs for front-end communication and used gRPC for low-level system interactions."
+          "Developed and maintained Django-based systems for high-performance data processing",
+          "Optimized PostgreSQL and Redis configurations to enhance database efficiency",
+          "Implemented Git workflows in Agile/Scrum development environments",
+          "Designed and documented REST/gRPC APIs for seamless system integration"
         ]
       },
       {
-        "position": "Software Engineer (Data Engineer & Backend )",
+        "position": "Software Engineer (Data Engineer & Backend)",
         "company": "Anacav",
-        "period": "September 2024 - Present",
+        "period": "2024/09 - Present",
         "tasks": [
-          "Installing, configuring, and managing Apache Kafka along with developing data consumers using Python for receiving, processing, and transferring data.",
-          "Designing, implementing, and managing PostgreSQL and SingleStore for data storage and retrieval.",
-          "Developing RESTful services using Flask and FastAPI.",
-          "Installing Linux and configuring related infrastructure such as iptables, Nginx, and other necessary tools."
+          "Architected and maintained Kafka pipelines for real-time data streaming",
+          "Enhanced database architectures for PostgreSQL and SingleStore implementations",
+          "Developed backend services using Flask and FastAPI frameworks",
+          "Configured and maintained Nginx server environments for production deployments"
         ]
       }
     ]
   },
   "contact": {
-    "title": "Contact Me",
+    "title": "Contact Information",
     "name": "Your Name",
     "email": "Your Email",
-    "phone": "Your phone",
     "message": "Your Message",
+    "phone": "Your Phone",
     "namePlaceholder": "Enter your name",
     "emailPlaceholder": "Enter your email",
     "messagePlaceholder": "Enter your message",
@@ -78,40 +79,48 @@
     "formError": "Please fill in all fields."
   },
   "project": {
-    "title": "My Projects",
-    "technologiesUsed": "Technologies Used",
+    "title": "Selected Projects",
+    "technologiesUsed": "Technical Stack",
     "client": "Client",
     "startDate": "Project Start Date",
     "endDate": "Project End Date"
   },
   "projects": [
     {
-      "title": "Client Management Website",
+      "title": "Client Management Platform",
       "urls": "https://vakilehsanamini.ir/",
-      "description": "This project is a management website for a law office, including client management, case tracking, and notifications. The lawyer can record and track client and case details. It also supports SMS alerts for updates and internal notifications for hearings and case progress.",
+      "description": [
+        "Developed comprehensive client management system for legal practice",
+        "Implemented automated case tracking with real-time notification system",
+        "Implemented event SMS alerts.",
+        "Deployed with Docker & Nginx"
+      ],
       "technologies": [
         "Django",
         "React",
-        "js",
         "PostgreSQL",
-        "REST",
+        "REST API",
         "Docker",
         "Nginx"
       ],
-      "client": "Ehsan Amini",
-      "startDate": "2025-04-08",
-      "endDate": "2025-05-31"
+      "client": "Ehsan Amini Law Office",
+      "startDate": "2025/04/08",
+      "endDate": "2025/05/31"
     },
     {
-      "title": "Shift Supervisor",
-      "description": "This project is part of a PDMS (Plant Design Management System), designed for managing and analyzing daily data in an industrial environment. In this system, users with different access levels can enter their daily information related to their respective sections, while admins can generate various daily, monthly, and production reports.",
+      "title": "Production Data Management System",
+      "description": [
+        "Engineered industrial data management platform with role-based access",
+        "Developed automated reporting tools for operational analytics",
+        "Implemented data processing pipelines using pandas and openpyxl"
+      ],
       "technologies": [
         "Python",
         "Django",
         "PostgreSQL",
-        "openpyxl",
         "pandas",
-        "docker"
+        "openpyxl",
+        "Docker"
       ],
       "client": "Ipek Yadegar Ilyad",
       "startDate": "2024/10/02",
@@ -119,76 +128,85 @@
     },
     {
       "title": "Shirino Hotel",
-      "description": "This project is a food reservation system for employees, allowing them to order food on specific days for themselves and their families. The priority system is automated or can be managed by the employer, with prioritized employees receiving SMS notifications to collect their meals.",
+      "description": [
+        "Developed employee meal reservation system with priority management",
+        "Implemented automated SMS notification service",
+        "Designed scheduled task system using APScheduler"
+      ],
       "technologies": [
-        "Python",
         "Django",
         "PostgreSQL",
         "APScheduler",
-        "docker",
-        "nginx",
-        "drf"
+        "Docker",
+        "Nginx",
+        "DRF"
       ],
-      "client": "Ipek Yadegar Ilyad",
+      "client": "Shirino Hotel",
       "startDate": "2024/11/22",
       "endDate": "2025/02/01"
     },
     {
-      "title": "Royasazan",
-      "description": "This project is a website for introducing a company, featuring sections such as an overview of the company, services, and projects. Each project’s location is displayed on a map using folium. The project page also includes a gallery and detailed descriptions.",
+      "title": "Corporate Services Portal",
+      "description": [
+        "Developed company profile website with interactive service showcase",
+        "Implemented geographical project visualization using folium",
+        "Created dynamic project gallery with detailed descriptions"
+      ],
       "technologies": [
-        "Python",
         "Django",
         "PostgreSQL",
         "MVT",
-        "docker",
-        "nginx",
-        "gunicorn",
-        "folium"
+        "Docker",
+        "Nginx",
+        "Folium"
       ],
-      "client": "Royasazan",
+      "client": "Royasazan Construction",
       "startDate": "2020/07/22",
       "endDate": "2020/09/23"
     },
     {
-      "title": "Tavana",
-      "description": "This project is a board management system that allows users to define pins and send or receive data on each pin. Using Django and Celery, tasks can be scheduled to run automatically at specified times. Docker is used for deployment, and RabbitMQ is used for message management, ensuring scalable and automated operations.",
+      "title": "Data Visualization Dashboard",
+      "description": [
+        "Developed board management system for data visualization",
+        "Implemented scheduled tasks using Celery and RabbitMQ",
+        "Designed robust data transfer mechanisms for academic use"
+      ],
       "technologies": [
         "Python",
         "Django",
-        "drf",
-        "docker",
+        "DRF",
+        "Docker",
         "RabbitMQ",
         "Celery"
       ],
-      "client": "University Project",
+      "client": "University Research Project",
       "startDate": "2022/06/22",
       "endDate": "2022/09/22"
     }
   ],
   "courses": {
-    "title": "Courses I've Taken",
-    "date": "Courses End Date",
-    "source": "Source"
+    "title": "Professional Certifications",
+    "date": "Completion Date", 
+    "source": "Provider"
   },
   "course": [
     {
-      "title": "Advanced Django",
-      "date": "2023-02-17",
-      "source": "maktabkhooneh",
+      "title": "Advanced Django Development",
+      "date": "2023/02/17",
+      "source": "Maktabkhooneh",
       "link": "https://maktabkhooneh.org/certificates/mk-729eq0/?print=true"
     },
     {
-      "title": "Machine Learning with Python",
-      "date": "2021-11-23",
-      "source": "maktabkhooneh",
+      "title": "Machine Learning Fundamentals",
+      "date": "2021/11/23",
+      "source": "Maktabkhooneh",
       "link": "https://maktabkhooneh.org/certificates/mk-gll8de/?print=true"
     },
     {
       "title": "Advanced Python Programming",
-      "date": "2019-10-27",
-      "source": "maktabkhooneh",
-      "link": "https://maktabkhooneh.org/certificates/mk-729eq0/?print=true"
+      "date": "2019/10/27",
+      "source": "Maktabkhooneh",
+      "link": "https://maktabkhooneh.org/certificates/mk-tqffrc/?print=true"
     }
   ]
 }
