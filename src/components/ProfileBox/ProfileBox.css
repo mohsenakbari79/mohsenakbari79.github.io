@@ -75,76 +75,78 @@
     margin: 0;
     padding: 0;
   }
-  
 
   .profile-container {
-    width: 100% ; 
-    margin: -4mm !important;
-    padding: 4mm 0 ;
-    box-shadow: none ;
-    position: static ;
-    text-align: center ;
-
+    width: 100%;
+    margin: -3.4mm auto !important;
+    padding: 3.4mm 0;
+    box-shadow: none;
+    position: static;
+    text-align: center;
   }
 
   .profile-image {
-    position: static ;
-    transform: none ;
-    width: 38mm ; 
-    height: auto ;
-    margin: 3mm auto ;
-    padding: 0 ;
-    display: block ;
+    position: static;
+    transform: none;
+    width: 36mm;
+    height: auto;
+    margin: 1mm auto;
+    padding: 0;
+    display: block;
     border-radius: 50%;
-    box-shadow: none ;
-    overflow: visible ;
-    background-color: transparent ;
+    box-shadow: none;
+    overflow: visible;
+    background-color: transparent;
   }
 
   .profile-image img {
-    width: 100% ;
-    height: auto ;
-    object-fit: contain ;
-    object-position: center ;
-    display: block ;
-    border-radius: 50% ;
-    margin: 0 auto ;
-    padding: 0 ;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    border-radius: 50%;
+    margin: 0 auto;
+    padding: 0;
   }
+
   .profile-title {
-    margin-top: 4mm;
+    margin-top: 3mm;
   }
+
   .profile-title h1 {
-    font-size: 22pt !important;
+    font-size: 17pt !important;
   }
+
   .profile-title h2 {
-    font-size: 20pt !important;
+    font-size: 16pt !important;
   }
+
   .profile-details .container {
     width: 100%;
     padding: 0;
   }
-  
+
   .profile-details .row {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -1mm;
   }
-  
+
   .profile-details [class^="col-"] {
-    padding: 0 0.5mm;
+    padding: 0 0.4mm;
     width: 50%;
     float: left;
-    margin: 1mm 0;
+    margin: 0.855mm 0;
     box-sizing: border-box;
   }
-  
+
   .profile-details p {
-    font-size: 13pt;
+    font-size: 10.8pt;
     margin: 1mm 0 0 0;
     text-align: center;
     color: #000;
-    line-height: 1.7;
+    line-height: 1.2;
     direction: rtl;
   }
-  }
+}

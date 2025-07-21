@@ -33,7 +33,29 @@
     "title": "Professional Profiles"
   },
   "skills": {
-    "title": "Technical Expertise"
+    "title": "Technical Expertise",
+    "categories": [
+      {
+        "category": "Backend",
+        "skills": ["Python", "Django", "Flask", "FastAPI"]
+      },
+      {
+        "category": "Frontend",
+        "skills": ["React.js"]
+      },
+      {
+        "category": "Database",
+        "skills": ["PostgreSQL", "Redis", "SingleStore"]
+      },
+      {
+        "category": "DevOps",
+        "skills": ["Docker", "Nginx"]
+      },
+      {
+        "category": "Others",
+        "skills": ["Celery", "Kafka", "Tkinter", "RabbitMQ"]
+      }
+    ]
   },
   "experience": {
     "title": "Professional Experience",
@@ -186,7 +208,7 @@
   ],
   "courses": {
     "title": "Professional Certifications",
-    "date": "Completion Date", 
+    "date": "Completion Date",
     "source": "Provider"
   },
   "course": [

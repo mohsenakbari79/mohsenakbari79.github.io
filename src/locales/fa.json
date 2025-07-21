@@ -32,7 +32,29 @@
     "title": "شبکه‌های اجتماعی"
   },
   "skills": {
-    "title": "مهارت‌های فنی"
+    "title": "مهارت‌های فنی",
+    "categories": [
+      {
+        "category": "Backend",
+        "skills": ["Python", "Django", "Flask", "FastAPI"]
+      },
+      {
+        "category": "Frontend",
+        "skills": ["React.js"]
+      },
+      {
+        "category": "Database",
+        "skills": ["PostgreSQL", "Redis", "SingleStore"]
+      },
+      {
+        "category": "DevOps",
+        "skills": ["Docker", "Nginx"]
+      },
+      {
+        "category": "Others",
+        "skills": ["Celery", "Kafka", "Tkinter", "RabbitMQ"]
+      }
+    ]
   },
   "experience": {
     "title": "سوابق شغلی",

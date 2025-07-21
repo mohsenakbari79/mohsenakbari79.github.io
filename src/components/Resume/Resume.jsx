@@ -8,7 +8,7 @@ import './CSS/Resume.css';
 function Resume() {
   const { t, i18n } = useTranslation();
   const isRTL = i18n.language === 'fa';
-  const skills = ['Python', 'Django', 'Flask', 'Redis', 'SQL', 'React.js', 'Tkinter', 'Docker', 'Celery', 'Kafka'];
+  const skillCategories = t('skills.categories', { returnObjects: true });
   const experiences = t('experience.jobs', { returnObjects: true });
   const education = t('education.degrees', { returnObjects: true });
 
@@ -16,7 +16,7 @@ function Resume() {
     <div className='resume-container'>
       <div className={`about-me-container ${isRTL ? 'rtl' : ''}`}>
         <h1>{t('about_me.title')}</h1>
-        <p >
+        <p>
           {t('about_me.summary')}
         </p>
       </div>
@@ -29,6 +29,23 @@ function Resume() {
             <p className="period">{edu.start_year} - {edu.end_year}</p>
           </div>
         ))}
+      </div>
+      <div className="resume-container">
+        <h1>{t('skills.title')}</h1>
+        <div className="skills-container">
+          {skillCategories.map((category, index) => (
+            <div key={index} className="skill-category">
+              <h3 className={`category-title ${isRTL ? 'rtl' : ''}`}>{category.category}</h3>
+              <div className="category-skills">
+                {category.skills.map((skill, skillIndex) => (
+                  <div key={skillIndex} className="skill-box">
+                    {skill}
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
       <div className="resume-container">
         <h1>{t('social_media.title')}</h1>
@@ -44,16 +61,7 @@ function Resume() {
           </a>
         </div>
       </div>
-      <div className="resume-container">
-        <h1>{t('skills.title')}</h1>
-        <div className="skills-container">
-          {skills.map((skill, index) => (
-            <div key={index} className="skill-box">
-              {skill}
-            </div>
-          ))}
-        </div>
-      </div>
+      
       <div className="resume-container">
         <h1>{t('experience.title')}</h1>
         {experiences.map((exp, index) => (
