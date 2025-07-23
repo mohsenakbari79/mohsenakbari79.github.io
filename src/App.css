@@ -1,10 +1,40 @@
 :root {
-  --title-color: hwb(240 16% 64%);
-  --title-size: 1.5rem;
-  --line-color: hwb(240 24% 19%);
-  --button-active-color: #4da6ffe0;
-  --background-container-color:#f8f9fa ;
-  --border-color: #0025cc54;
+  --title-color: #1e3a8a;
+  --line-color: #3b82f6;
+  --button-active-color: #8bb0ff;
+  --background-container-color: #ffffff;
+  --border-color: #bfdbfe;
+  --text-color: #1f2937;
+  --muted-color: #6b7280;
+}
+
+.friendly {
+  width: 210mm !important;
+  margin: 0 auto !important;
+  padding: 10mm 0 !important;
+  box-sizing: border-box !important;
+  direction: inherit !important;
+}
+
+.print-friendly * {
+  position: static !important;
+  float: none !important;
+  animation: none !important;
+  width: 100% !important;
+  max-width: 190mm !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.print-friendly .skills-container {
+  display: block !important;
+}
+
+.print-friendly .skill-box {
+  display: inline-block;
+  margin: 5px;
 }
 
 @media print {

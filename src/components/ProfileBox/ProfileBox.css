@@ -1,13 +1,19 @@
 .profile-container {
-  width: 80%;
+  width: 82%;
   margin: 7rem auto;
-  background-color: var(--background-container-color);
+  background: linear-gradient(145deg, var(--background-container-color), #f1f5f9);
   padding: 20px;
-  border-radius: 15px;
+  border-radius: 10px;
   text-align: center;
   position: relative;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   margin-bottom: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
 .profile-image {
@@ -19,8 +25,13 @@
   height: 12rem;
   border-radius: 50%;
   overflow: hidden;
-  border: 3px solid #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--background-container-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.profile-image:hover {
+  transform: translateX(-50%) scale(1.05);
 }
 
 .profile-image img {
@@ -32,7 +43,19 @@
 .profile-title {
   margin: 10px 0;
   margin-top: 5rem;
-  color: hsl(240, 37%, 26%);
+  color: var(--title-color);
+}
+
+.profile-title h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: 'Vazirmatn', sans-serif;
+}
+
+.profile-title h2 {
+  font-size: 1.4rem;
+  color: var(--text-color);
+  font-weight: 500;
 }
 
 .profile-details {
@@ -43,17 +66,16 @@
 .profile-details p {
   font-size: 1.4rem;
   text-align: center;
-  direction: rtl !important;
+  direction: rtl;
   margin: 5px 0;
-  color: #666;
+  color: var(--text-color);
+  font-family: 'Vazirmatn', sans-serif;
 }
 
-/* ریسپانسیو برای صفحه‌نمایش */
 @media (max-width: 1200px) {
   .profile-container {
     width: 90%;
   }
-
   .profile-details p {
     font-size: 1.2rem;
   }
@@ -64,9 +86,12 @@
     width: 90%;
     padding: 20px 5px;
   }
-
   .profile-details p {
     font-size: 1rem;
+  }
+  .profile-image {
+    width: 10rem;
+    height: 10rem;
   }
 }
 
@@ -75,7 +100,6 @@
     margin: 0;
     padding: 0;
   }
-
   .profile-container {
     width: 100%;
     margin: -3.4mm auto !important;
@@ -84,7 +108,6 @@
     position: static;
     text-align: center;
   }
-
   .profile-image {
     position: static;
     transform: none;
@@ -98,7 +121,6 @@
     overflow: visible;
     background-color: transparent;
   }
-
   .profile-image img {
     width: 100%;
     height: auto;
@@ -109,30 +131,24 @@
     margin: 0 auto;
     padding: 0;
   }
-
   .profile-title {
     margin-top: 3mm;
   }
-
   .profile-title h1 {
     font-size: 17pt !important;
   }
-
   .profile-title h2 {
     font-size: 16pt !important;
   }
-
   .profile-details .container {
     width: 100%;
     padding: 0;
   }
-
   .profile-details .row {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -1mm;
   }
-
   .profile-details [class^="col-"] {
     padding: 0 0.4mm;
     width: 50%;
@@ -140,12 +156,11 @@
     margin: 0.855mm 0;
     box-sizing: border-box;
   }
-
   .profile-details p {
     font-size: 10.8pt;
     margin: 1mm 0 0 0;
     text-align: center;
-    color: #000;
+    color: var(--text-color);
     line-height: 1.2;
     direction: rtl;
   }
