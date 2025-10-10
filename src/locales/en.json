@@ -80,7 +80,7 @@
           "Developed and maintained Django-based systems for high-performance data processing",
           "Optimized PostgreSQL and Redis configurations to enhance database efficiency",
           "Implemented Git workflows in Agile/Scrum development environments",
-          "Designed and documented REST/gRPC APIs for seamless system integration"
+          "Designed and documented REST/gRPC APIs for reliable communication across 100+ distributed nodes"
         ]
       }
       
@@ -109,27 +109,6 @@
     "endDate": "Project End Date"
   },
   "projects": [
-    {
-      "title": "Client Management Platform",
-      "urls": "https://vakilehsanamini.ir/",
-      "description": [
-        "Developed comprehensive client management system for legal practice",
-        "Implemented automated case tracking with real-time notification system",
-        "Implemented event SMS alerts.",
-        "Deployed with Docker & Nginx"
-      ],
-      "technologies": [
-        "Django",
-        "React",
-        "PostgreSQL",
-        "REST API",
-        "Docker",
-        "Nginx"
-      ],
-      "client": "Ehsan Amini Law Office",
-      "startDate": "2025/04/08",
-      "endDate": "2025/05/31"
-    },
     {
       "title": "Production Data Management System",
       "description": [
