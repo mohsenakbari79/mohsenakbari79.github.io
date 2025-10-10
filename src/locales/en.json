@@ -62,6 +62,17 @@
     "tasks_title": "Key Responsibilities & Achievements",
     "jobs": [
       {
+        "position": "Software Engineer (Data Engineer & Backend)",
+        "company": "Anacav",
+        "period": "2024/09 - Present",
+        "tasks": [
+          "Architected and maintained Kafka pipelines processing over 10M records daily",
+          "Enhanced database architectures for PostgreSQL and SingleStore managing 2B+ stored records",
+          "Developed backend services using Flask and FastAPI frameworks",
+          "Configured and maintained Nginx server environments for production deployments"
+        ]
+      },
+      {
         "position": "Software Developer (Backend & DevOps)",
         "company": "Payampardaz Company",
         "period": "2022/01 - 2022/10",
@@ -71,18 +82,8 @@
           "Implemented Git workflows in Agile/Scrum development environments",
           "Designed and documented REST/gRPC APIs for seamless system integration"
         ]
-      },
-      {
-        "position": "Software Engineer (Data Engineer & Backend)",
-        "company": "Anacav",
-        "period": "2024/09 - Present",
-        "tasks": [
-          "Architected and maintained Kafka pipelines for real-time data streaming",
-          "Enhanced database architectures for PostgreSQL and SingleStore implementations",
-          "Developed backend services using Flask and FastAPI frameworks",
-          "Configured and maintained Nginx server environments for production deployments"
-        ]
       }
+      
     ]
   },
   "contact": {
