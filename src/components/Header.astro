@@ -57,15 +57,21 @@ const isActive = (href: string) => normalize(href) === current;
 
     <!-- Actions -->
     <div class="flex items-center gap-2">
-      <a href={altHref} hreflang={lang === 'fa' ? 'en' : 'fa'} class="icon-btn" aria-label={altLabel} title={altLabel}>
-        <Icon name="globe" size={18} />
-        <span class="sr-only sm:not-sr-only sm:ms-1 sm:text-xs">{altLabel}</span>
+      <a
+        href={altHref}
+        hreflang={lang === 'fa' ? 'en' : 'fa'}
+        class="inline-flex h-10 items-center gap-2 rounded-xl border border-line bg-card px-3 text-sm font-medium text-sub transition hover:border-brand/40 hover:text-brand"
+        aria-label={altLabel}
+        title={altLabel}
+      >
+        <Icon name="globe" size={17} />
+        <span class="hidden sm:inline">{altLabel}</span>
       </a>
 
       <button
         type="button"
         data-theme-toggle
-        class="icon-btn"
+        class="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-line bg-card text-sub transition hover:border-brand/40 hover:text-brand"
         aria-label={lang === 'fa' ? 'تغییر تم' : 'Toggle theme'}
       >
         <span class="theme-icon-sun"><Icon name="sun" size={18} /></span>
