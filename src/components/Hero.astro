@@ -82,18 +82,29 @@ const labels = {
     </div>
 
     <!-- Portrait -->
-    <div class="reveal justify-self-center lg:justify-self-end">
+    <div class="reveal relative justify-self-center lg:justify-self-end">
+      <!-- Soft ambient glow behind the photo (replaces the hard gradient border) -->
       <div
-        class="relative rounded-[2rem] bg-gradient-to-br from-brand via-brand-strong to-[var(--c-glow-2)] p-1 shadow-2xl shadow-brand/25"
+        class="absolute -inset-8 rounded-[3rem] bg-gradient-to-br from-brand/20 via-[var(--c-glow-2)]/15 to-[var(--c-glow-3)]/20 blur-2xl"
+        aria-hidden="true"
+      >
+      </div>
+      <div
+        class="relative overflow-hidden rounded-[1.75rem] border border-line bg-card shadow-[0_24px_60px_-20px_rgb(15_23_42/0.28)]"
       >
         <img
           src="/profile.png"
           alt={profile.name}
-          width="300"
-          height="300"
-          class="h-64 w-64 rounded-[1.85rem] object-cover sm:h-72 sm:w-72"
+          width="320"
+          height="320"
+          class="h-64 w-64 object-cover sm:h-80 sm:w-80"
           loading="eager"
         />
+        <!-- subtle inner highlight -->
+        <div
+          class="pointer-events-none absolute inset-0 rounded-[1.75rem] ring-1 ring-inset ring-white/40 dark:ring-white/10"
+        >
+        </div>
       </div>
     </div>
   </div>
