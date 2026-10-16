@@ -32,8 +32,6 @@ jobs:
 
       - name: Build Astro site
         run: npm run build
-        env:
-          PUBLIC_WEB3FORMS_ACCESS_KEY: ${{ secrets.PUBLIC_WEB3FORMS_ACCESS_KEY }}
 
       - name: Configure git authentication
         run: |
