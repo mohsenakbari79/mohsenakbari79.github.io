@@ -10,7 +10,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "deploy": "gh-pages -d dist",
+    "deploy": "gh-pages -d dist --dotfiles --nojekyll",
     "check": "astro check"
   },
   "dependencies": {
