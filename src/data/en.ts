@@ -132,12 +132,13 @@ export const en: Content = {
         'Designed scheduled task system using APScheduler',
       ],
       technologies: ['Django', 'PostgreSQL', 'APScheduler', 'Docker', 'Nginx', 'DRF'],
-      client: 'Shirino Hotel',
+      client: 'Ipek Yadegar Ilyad',
       startDate: '2024/11/22',
       endDate: '2025/02/01',
     },
     {
       title: 'Corporate Services Portal',
+      urls: 'https://royasazan.org',
       description: [
         'Developed company profile website with interactive service showcase',
         'Implemented geographical project visualization using folium',
