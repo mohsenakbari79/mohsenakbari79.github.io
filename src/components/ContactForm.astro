@@ -1,9 +1,7 @@
 ---
 /**
- * Contact form — submits via the Web3Forms API.
- * Requires PUBLIC_WEB3FORMS_ACCESS_KEY in the build environment
- * (free key from https://web3forms.com).
- *
+ * Contact form — submits via FormSubmit.co (no API key required).
+ * Messages are delivered by email to malevin2020@gmail.com.
  * Fields match the previous site: name, email, phone, message.
  */
 import Icon from './Icon.astro';
@@ -69,17 +67,16 @@ const contactInfo = [
     <!-- Form -->
     <form
       class="reveal card p-6 sm:p-8"
-      action={site.web3FormsEndpoint}
+      action={site.formEndpoint}
       method="POST"
       data-contact-form
       data-msg-sending={t.sending}
       data-msg-success={t.successMessage}
       data-msg-error={t.formError}
     >
-      <input type="hidden" name="access_key" value={site.web3FormsAccessKey} />
-      <input type="hidden" name="subject" value="پیام جدید از سایت mohsenakbari79.github.io" />
-      <input type="hidden" name="from_name" value="mohsenakbari79.github.io" />
-      <input type="checkbox" name="botcheck" class="hidden" aria-hidden="true" tabindex="-1" />
+      <input type="hidden" name="_subject" value="پیام جدید از سایت mohsenakbari79.github.io" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="text" name="_honey" class="hidden" aria-hidden="true" tabindex="-1" autocomplete="off" />
 
       <div class="grid gap-5 sm:grid-cols-2">
         <label class="block">
@@ -181,13 +178,23 @@ const contactInfo = [
       status?.classList.add('hidden');
 
       try {
+        // FormSubmit.co AJAX endpoint — JSON, no API key required
+        const payload: Record<string, string> = {};
+        new FormData(form).forEach((value, key) => {
+          if (typeof value === 'string') payload[key] = value;
+        });
+
         const response = await fetch(form.action, {
           method: 'POST',
-          body: new FormData(form),
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify(payload),
         });
-        const data = (await response.json()) as { success?: boolean };
+        const data = (await response.json()) as { success?: boolean | string };
 
-        if (response.ok && data.success) {
+        if (response.ok && (data.success === true || data.success === 'true')) {
           showStatus(msgSuccess, 'success');
           form.reset();
         } else {

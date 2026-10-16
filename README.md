@@ -15,13 +15,11 @@ npm run build        # ساخت خروجی استاتیک در dist/
 npm run preview      # پیش‌نمایش خروجی build
 ```
 
-## فرم تماس (Web3Forms)
+## فرم تماس (FormSubmit)
 
-فرم تماس از سرویس [Web3Forms](https://web3forms.com) استفاده می‌کند:
+فرم تماس از سرویس رایگان [FormSubmit](https://formsubmit.co) استفاده می‌کند و بدون نیاز به API key ایمیل را به `malevin2020@gmail.com` ارسال می‌کند.
 
-1. در <https://web3forms.com> ایمیل `malevin2020@gmail.com` را ثبت کنید و access key رایگان بگیرید.
-2. فایل `.env.example` را به `.env` کپی کرده و مقدار `PUBLIC_WEB3FORMS_ACCESS_KEY` را جایگزین کنید.
-3. دوباره build کنید. (در GitHub Actions می‌توانید همین متغیر را به‌صورت Repository Secret اضافه کنید.)
+> نکته: در اولین ارسال، یک ایمیل تأیید به صندوق ورودی شما می‌آید؛ یک بار روی لینک تأیید کلیک کنید تا فرم فعال شود.
 
 ## استقرار روی GitHub Pages
 

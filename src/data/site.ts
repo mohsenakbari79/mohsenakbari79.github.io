@@ -129,6 +129,6 @@ export const site = {
   url: 'https://mohsenakbari79.github.io',
   email: 'malevin2020@gmail.com',
   ogImage: 'https://mohsenakbari79.github.io/profile.png',
-  web3FormsEndpoint: 'https://api.web3forms.com/submit',
-  web3FormsAccessKey: import.meta.env.PUBLIC_WEB3FORMS_ACCESS_KEY ?? '',
+  /** FormSubmit.co AJAX endpoint — works without any API key. */
+  formEndpoint: 'https://formsubmit.co/ajax/malevin2020@gmail.com',
 } as const;
