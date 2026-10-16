@@ -1,0 +1,210 @@
+import type { Content } from './site';
+
+/** Persian content — copied verbatim from the previous site (src/locales/fa.json). */
+export const fa: Content = {
+  header: {
+    title: 'رزومه من',
+    language: 'زبان',
+  },
+  profile: {
+    name: 'محسن اکبری',
+    expertise: 'توسعه‌دهنده فول‌استک',
+    phone: 'تلفن همراه: ۰۹۱۳۰۳۳۰۶۲۴',
+    email: 'ایمیل: malevin2020@gmail.com',
+    marital_status: 'وضعیت تأهل: مجرد',
+    military_service: 'وضعیت نظام‌وظیفه: انجام شده',
+    address: 'آدرس: اصفهان، ایران',
+    birthday: 'تاریخ تولد: ۱۳۷۹/۰۵/۱۰',
+  },
+  about_me: {
+    title: 'درباره من',
+    summary:
+      'برنامه‌نویسی را با C و ++C آغاز کردم که دید خوبی از مفاهیم پایه به من داد. بعدها به پایتون و توسعه وب علاقه مند شدم. حالا به عنوان توسعه‌دهنده فول‌استک با جنگو و ریکت، برنامه‌های کاربردی می‌سازم و همزمان در حال یادگیری چیزهای جدید هستم. معتقدم بهترین راه برای یادگیری، ساختن پروژه‌های واقعی است.',
+  },
+  education: {
+    title: 'تحصیلات',
+    degrees: [
+      {
+        degree: 'کارشناسی مهندسی کامپیوتر',
+        university: 'دانشگاه کاشان',
+        start_year: '۱۳۹۷',
+        end_year: '۱۴۰۱',
+      },
+    ],
+  },
+  social_media: {
+    title: 'شبکه‌های اجتماعی',
+  },
+  skills: {
+    title: 'مهارت‌های فنی',
+    categories: [
+      {
+        category: 'Backend',
+        skills: ['Python', 'Django', 'Flask', 'FastAPI'],
+      },
+      {
+        category: 'Frontend',
+        skills: ['React.js'],
+      },
+      {
+        category: 'Database',
+        skills: ['PostgreSQL', 'Redis', 'SingleStore'],
+      },
+      {
+        category: 'DevOps',
+        skills: ['Docker', 'Nginx'],
+      },
+      {
+        category: 'Others',
+        skills: ['Celery', 'Kafka', 'Tkinter', 'RabbitMQ'],
+      },
+    ],
+  },
+  experience: {
+    title: 'سوابق شغلی',
+    tasks_title: 'مسئولیت‌ها و دستاوردهای کلیدی',
+    jobs: [
+      {
+        position: 'مهندس نرم‌افزار (مهندس داده و بک‌اند)',
+        company: 'آناکاو',
+        period: '۱۴۰۳/۰۷ - تاکنون',
+        tasks: [
+          'طراحی و نگهداری خطوط داده‌ی بلادرنگ مبتنی بر Kafka برای پردازش بیش از ۱۰ میلیون رکورد در روز',
+          'بهبود معماری پایگاه‌داده در پیاده‌سازی‌های PostgreSQL و SingleStore با قابلیت ذخیره‌سازی بیش از ۲ میلیارد رکورد',
+          'توسعه سرویس‌های بک‌اند با استفاده از چارچوب‌های Flask و FastAPI',
+          'پیکربندی و نگهداری سرورهای Nginx برای استقرار در محیط‌های تولید',
+        ],
+      },
+      {
+        position: 'توسعه‌دهنده نرم‌افزار (بک‌اند و دواپس)',
+        company: 'شرکت پیام‌پرداز',
+        period: '۱۴۰۰/۱۰ - ۱۴۰۱/۰۷',
+        tasks: [
+          'توسعه دهنده بک‌اند با استفاده از Django و Python و ...',
+          'طراحی و پیاده‌سازی پایگاه داده‌ با استفاده از PostgreSQL و Redis.',
+          'پیاده‌سازی گردش کار Git در محیط‌های توسعه Agile/Scrum',
+          'طراحی و پیاده‌سازی APIهای REST برای ارتباط با فرانت‌اند و استفاده از gRPC برای ارتباط سریع و بهینه با بیش از ۱۰۰ نود توزیع‌شده',
+        ],
+      },
+    ],
+  },
+  contact: {
+    title: 'اطلاعات تماس',
+    name: 'نام شما',
+    email: 'ایمیل شما',
+    message: 'پیام شما',
+    phone: 'شماره تماس شما',
+    namePlaceholder: 'نام خود را وارد کنید',
+    emailPlaceholder: 'ایمیل خود را وارد کنید',
+    messagePlaceholder: 'پیام خود را وارد کنید',
+    phonePlaceholder: 'شماره تلفن خود را وارد کنید',
+    send: 'ارسال پیام',
+    sending: 'در حال ارسال...',
+    successMessage: 'پیام شما با موفقیت ارسال شد!',
+    formError: 'لطفاً تمامی فیلدها را پر کنید.',
+  },
+  project: {
+    title: 'پروژه‌های منتخب',
+    technologiesUsed: 'فناوری‌های استفاده شده',
+    client: 'کارفرما',
+    startDate: 'تاریخ شروع پروژه',
+    endDate: 'تاریخ پایان پروژه',
+  },
+  projects: [
+    {
+      title: 'سیستم مدیریت داده‌های تولید',
+      description: [
+        'طراحی پلتفرم مدیریت داده‌های صنعتی با دسترسی مبتنی بر نقش',
+        'توسعه ابزارهای گزارش‌دهی خودکار برای تحلیل‌های عملیاتی',
+        'پیاده‌سازی خطوط پردازش داده با استفاده از pandas و openpyxl',
+      ],
+      technologies: ['Python', 'Django', 'PostgreSQL', 'pandas', 'openpyxl', 'Docker'],
+      client: 'ایپک یادگار ایلیاد',
+      startDate: '۱۴۰۳/۰۷/۱۰',
+      endDate: 'در حال انجام',
+    },
+    {
+      title: 'هتل شیرینو',
+      urls: 'https://www.iyi.ir',
+      description: [
+        'توسعه سامانه رزرو غذای کارکنان با امکان سفارش برای خانواده',
+        'پیاده‌سازی سیستم اولویت‌بندی خودکار ',
+        'طراحی سرویس اطلاع‌رسانی از طریق پیامک',
+        'استقرار با استفاده از Docker و Nginx',
+      ],
+      technologies: [
+        'Python',
+        'Django',
+        'PostgreSQL',
+        'APScheduler',
+        'Docker',
+        'Nginx',
+        'DRF',
+      ],
+      client: 'ایپک یادگار ایلیاد',
+      startDate: '۱۴۰۳/۰۹/۰۱',
+      endDate: '۱۴۰۳/۱۱/۱۲',
+    },
+    {
+      title: 'رویاسازان',
+      urls: 'https://royasazan.org',
+      description: [
+        'توسعه وبسایت معرفی شرکت ',
+        'پیاده‌سازی نقشه تعاملی پروژه‌ها با فولیوم',
+        'طراحی گالری تصاویر و توضیحات پروژه‌ها',
+        'استقرار با Docker و Nginx',
+      ],
+      technologies: [
+        'Python',
+        'Django',
+        'PostgreSQL',
+        'MVT',
+        'Docker',
+        'Nginx',
+        'Gunicorn',
+      ],
+      client: 'رویاسازان',
+      startDate: '۱۳۹۹/۰۵/۰۱',
+      endDate: '۱۳۹۹/۰۷/۰۱',
+    },
+    {
+      title: 'توانا',
+      urls: 'https://github.com/mohsenakbari79/tavana',
+      description: [
+        'توسعه سیستم مدیریت برد برای ارسال/دریافت داده',
+        'پیاده‌سازی تسک‌های زمان‌بندی شده با Celery',
+        'استقرار با Docker و پیکربندی RabbitMQ',
+        'طراحی معماری مقیاس‌پذیر و خودکار',
+      ],
+      technologies: ['Python', 'Django', 'DRF', 'Docker', 'RabbitMQ', 'Celery'],
+      client: 'پروژه دانشگاهی',
+      startDate: '۱۴۰۱/۰۴/۰۱',
+      endDate: '۱۴۰۱/۰۷/۰۱',
+    },
+  ],
+  courses: {
+    title: 'دوره‌های آموزشی',
+    date: 'تاریخ گذراندن دوره',
+    source: 'مؤسسه',
+  },
+  course: [
+    {
+      title: 'توسعه پیشرفته جنگو',
+      date: '۱۴۰۱/۱۱/۲۸',
+      source: 'مکتب‌خونه',
+      link: 'https://maktabkhooneh.org/certificates/mk-729eq0/?print=true',
+    },
+    {
+      title: 'مبانی یادگیری ماشین',
+      date: '۱۴۰۰/۰۹/۰۲',
+      source: 'مکتب‌خونه',
+      link: 'https://maktabkhooneh.org/certificates/mk-gll8de/?print=true',
+    },
+    {
+      title: 'برنامه‌نویسی پیشرفته پایتون',
+      date: '۱۳۹۸/۰۸/۰۵',
+      source: 'مکتب‌خونه',
+      link: 'https://maktabkhooneh.org/certificates/mk-tqffrc/?print=true',
+    },
+  ],
+};

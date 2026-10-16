@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# محسن اکبری — سایت شخصی
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+سایت شخصی **محسن اکبری** (توسعه‌دهنده فول‌استک) ساخته‌شده با [Astro](https://astro.build) و Tailwind CSS.
 
-## Available Scripts
+- آدرس سایت: <https://mohsenakbari79.github.io>
+- زبان‌ها: فارسی (پیش‌فرض، RTL) و English
+- امکانات: دارک مود، انیمیشن‌های scroll-reveal، View Transitions، فرم تماس، SEO کامل، خروجی چاپی رزومه
 
-In the project directory, you can run:
+## اجرا
 
-### `npm start`
+```bash
+npm install          # نصب وابستگی‌ها
+npm run dev          # اجرای محلی (http://localhost:4321)
+npm run build        # ساخت خروجی استاتیک در dist/
+npm run preview      # پیش‌نمایش خروجی build
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## فرم تماس (Web3Forms)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+فرم تماس از سرویس [Web3Forms](https://web3forms.com) استفاده می‌کند:
 
-### `npm test`
+1. در <https://web3forms.com> ایمیل `malevin2020@gmail.com` را ثبت کنید و access key رایگان بگیرید.
+2. فایل `.env.example` را به `.env` کپی کرده و مقدار `PUBLIC_WEB3FORMS_ACCESS_KEY` را جایگزین کنید.
+3. دوباره build کنید. (در GitHub Actions می‌توانید همین متغیر را به‌صورت Repository Secret اضافه کنید.)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## استقرار روی GitHub Pages
 
-### `npm run build`
+استقرار به‌صورت خودکار انجام می‌شود: با هر push به شاخه `main`، GitHub Action سایت را build کرده و روی شاخه `gh-pages` منتشر می‌کند. در تنظیمات Pages ریپازیتوری، Source باید روی `gh-pages` تنظیم شده باشد.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## ساختار پروژه
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+src/
+├── pages/
+│   ├── index.astro        صفحه اصلی فارسی (Hero + درباره من + مهارت‌ها)
+│   ├── resume.astro       رزومه فارسی (تحصیلات + سوابق + پروژه‌ها + دوره‌ها)
+│   ├── contact.astro      تماس فارسی
+│   └── en/                نسخه انگلیسی هر سه صفحه
+├── layouts/
+│   └── BaseLayout.astro   لایوت اصلی (SEO، تم، هدر و فوتر)
+├── components/            کامپوننت‌های Astro
+├── data/                  محتوای فارسی و انگلیسی (fa.ts / en.ts)
+└── styles/global.css      توکن‌های رنگی، تم روشن/تیره و استایل‌های سراسری
+```

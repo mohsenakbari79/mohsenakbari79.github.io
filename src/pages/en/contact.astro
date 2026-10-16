@@ -1,0 +1,12 @@
+---
+/**
+ * Contact (English) — contact details + message form.
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ContactForm from '../../components/ContactForm.astro';
+import { en } from '../../data/en';
+---
+
+<BaseLayout lang="en" content={en}>
+  <ContactForm content={en} />
+</BaseLayout>

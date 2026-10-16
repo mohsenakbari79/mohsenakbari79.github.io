@@ -1,0 +1,28 @@
+---
+/**
+ * About — short professional summary.
+ */
+import SectionHeading from './SectionHeading.astro';
+import type { Content } from '../data/site';
+
+interface Props {
+  content: Content;
+}
+
+const { content } = Astro.props;
+---
+
+<section id="about" class="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+  <SectionHeading title={content.about_me.title} icon="user" />
+
+  <div class="reveal card mx-auto max-w-3xl p-8 sm:p-10">
+    <div class="mb-4 flex justify-center text-brand/60" aria-hidden="true">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M7.17 6A5.17 5.17 0 0 0 2 11.17V18h7v-6.83H5.83A3.17 3.17 0 0 1 9 8h1V6H7.17zm10 0A5.17 5.17 0 0 0 12 11.17V18h7v-6.83h-3.17A3.17 3.17 0 0 1 19 8h1V6h-2.83z"
+        ></path>
+      </svg>
+    </div>
+    <p class="text-center leading-8 text-ink/90">{content.about_me.summary}</p>
+  </div>
+</section>

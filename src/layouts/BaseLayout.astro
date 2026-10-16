@@ -1,0 +1,162 @@
+---
+/**
+ * BaseLayout — shared HTML shell for every page.
+ * Handles SEO meta tags, Open Graph / Twitter cards, JSON-LD,
+ * dark-mode bootstrap script, view transitions and global chrome.
+ */
+import '@fontsource-variable/vazirmatn';
+import '@fontsource-variable/inter';
+import '../styles/global.css';
+
+import { ClientRouter } from 'astro:transitions';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { site, type Content, type Locale } from '../data/site';
+
+interface Props {
+  lang: Locale;
+  content: Content;
+  title?: string;
+  description?: string;
+}
+
+const { lang, content, title, description } = Astro.props;
+
+const pageTitle =
+  title ??
+  (lang === 'fa'
+    ? `${content.profile.name} | ${content.profile.expertise}`
+    : 'Mohsen Akbari | Full Stack Python Developer');
+
+const pageDescription =
+  description ??
+  (lang === 'fa'
+    ? content.about_me.summary
+    : 'Professional Python Developer specializing in Django and Flask with React integration. 3+ years of web development experience.');
+
+const canonical = new URL(Astro.url.pathname, site.url).href;
+const dir = lang === 'fa' ? 'rtl' : 'ltr';
+
+const personLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Mohsen Akbari',
+  jobTitle: 'Full Stack Developer',
+  email: `mailto:${site.email}`,
+  url: site.url,
+  address: {
+    '@type': 'PostalAddress',
+    addressCountry: 'IR',
+    addressRegion: 'Isfahan',
+  },
+  sameAs: [
+    'https://github.com/mohsenakbari79',
+    'https://www.linkedin.com/in/mohsen-akbari-834524359/',
+  ],
+  image: site.ogImage,
+};
+---
+
+<!doctype html>
+<html lang={lang} dir={dir}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta name="theme-color" content="#2563eb" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:image" content={site.ogImage} />
+    <meta property="og:locale" content={lang === 'fa' ? 'fa_IR' : 'en_US'} />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={pageDescription} />
+    <meta name="twitter:image" content={site.ogImage} />
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json" set:html={JSON.stringify(personLd)} />
+
+    <!-- Apply saved / system theme before first paint to avoid flash -->
+    <script is:inline>
+      (() => {
+        const stored = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const dark = stored ? stored === 'dark' : prefersDark;
+        document.documentElement.classList.toggle('dark', dark);
+      })();
+    </script>
+
+    <!-- Smooth page transitions between routes -->
+    <ClientRouter />
+
+    <!-- Theme toggle (must run before interactive components hydrate) -->
+    <script>
+      function initThemeToggle() {
+        document.querySelectorAll<HTMLButtonElement>('[data-theme-toggle]').forEach((btn) => {
+          if (btn.dataset.themeBound === '1') return;
+          btn.dataset.themeBound = '1';
+          btn.addEventListener('click', () => {
+            const dark = document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', dark ? 'dark' : 'light');
+          });
+        });
+      }
+      initThemeToggle();
+      document.addEventListener('astro:after-swap', initThemeToggle);
+    </script>
+
+    <!-- Scroll-reveal animations -->
+    <script>
+      function initReveal() {
+        const elements = document.querySelectorAll<HTMLElement>('.reveal');
+        if (!('IntersectionObserver' in window)) {
+          elements.forEach((el) => el.classList.add('revealed'));
+          return;
+        }
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+        );
+        elements.forEach((el) => observer.observe(el));
+      }
+      initReveal();
+      document.addEventListener('astro:page-load', initReveal);
+    </script>
+  </head>
+
+  <body class="min-h-screen">
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:absolute focus:start-4 focus:top-4 focus:z-50 focus:rounded-xl focus:bg-brand focus:px-4 focus:py-2 focus:text-white"
+    >
+      {lang === 'fa' ? 'رفتن به محتوا' : 'Skip to content'}
+    </a>
+
+    <Header lang={lang} />
+
+    <main id="main">
+      <slot />
+    </main>
+
+    <Footer lang={lang} name={content.profile.name} expertise={content.profile.expertise} />
+  </body>
+</html>

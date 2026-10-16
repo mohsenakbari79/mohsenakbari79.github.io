@@ -1,0 +1,55 @@
+---
+/**
+ * Courses — training certificates list.
+ */
+import SectionHeading from './SectionHeading.astro';
+import Icon from './Icon.astro';
+import type { Content } from '../data/site';
+
+interface Props {
+  content: Content;
+}
+
+const { content } = Astro.props;
+const c = content.courses;
+---
+
+<section id="courses" class="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+  <SectionHeading title={c.title} icon="award" />
+
+  <div class="mx-auto grid max-w-3xl gap-4">
+    {
+      content.course.map((course, i) => (
+        <article
+          class="reveal card card-hover flex flex-wrap items-center justify-between gap-4 p-5 sm:p-6"
+          style={`transition-delay: ${i * 70}ms`}
+        >
+          <div class="flex items-center gap-4">
+            <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-soft text-brand">
+              <Icon name="book" size={18} />
+            </span>
+            <div>
+              <h3 class="font-bold">
+                <a
+                  href={course.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-1.5 transition hover:text-brand"
+                >
+                  {course.title}
+                  <Icon name="external-link" size={13} />
+                </a>
+              </h3>
+              <p class="mt-0.5 text-sm text-sub">
+                {c.source}: {course.source}
+              </p>
+            </div>
+          </div>
+          <span class="chip">
+            {c.date}: {course.date}
+          </span>
+        </article>
+      ))
+    }
+  </div>
+</section>

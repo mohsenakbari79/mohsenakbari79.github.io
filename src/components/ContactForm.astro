@@ -1,0 +1,209 @@
+---
+/**
+ * Contact form — submits via the Web3Forms API.
+ * Requires PUBLIC_WEB3FORMS_ACCESS_KEY in the build environment
+ * (free key from https://web3forms.com).
+ *
+ * Fields match the previous site: name, email, phone, message.
+ */
+import Icon from './Icon.astro';
+import SectionHeading from './SectionHeading.astro';
+import SocialLinks from './SocialLinks.astro';
+import { site, type Content } from '../data/site';
+
+interface Props {
+  content: Content;
+}
+
+const { content } = Astro.props;
+const t = content.contact;
+const { profile } = content;
+
+const contactInfo = [
+  { icon: 'phone', text: profile.phone, href: 'tel:+989130330624' },
+  { icon: 'mail', text: profile.email, href: `mailto:${site.email}` },
+  { icon: 'map-pin', text: profile.address },
+];
+---
+
+<section id="contact" class="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+  <SectionHeading title={t.title} icon="send" />
+
+  <div class="grid items-start gap-8 lg:grid-cols-[1fr_1.4fr]">
+    <!-- Contact details -->
+    <div class="reveal card p-6 sm:p-8">
+      <h3 class="text-lg font-bold">{profile.name}</h3>
+      <p class="mt-1 text-sub">{profile.expertise}</p>
+
+      <ul class="mt-6 space-y-4">
+        {
+          contactInfo.map((item) => (
+            <li class="flex items-center gap-3">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-line bg-page text-brand">
+                <Icon name={item.icon} size={17} />
+              </span>
+              {item.href ? (
+                <a
+                  href={item.href}
+                  class="text-sm text-sub transition hover:text-brand"
+                  dir="auto"
+                >
+                  {item.text}
+                </a>
+              ) : (
+                <span class="text-sm text-sub" dir="auto">
+                  {item.text}
+                </span>
+              )}
+            </li>
+          ))
+        }
+      </ul>
+
+      <div class="mt-8 border-t border-line pt-6">
+        <p class="mb-3 text-sm font-semibold text-sub">{content.social_media.title}</p>
+        <SocialLinks />
+      </div>
+    </div>
+
+    <!-- Form -->
+    <form
+      class="reveal card p-6 sm:p-8"
+      action={site.web3FormsEndpoint}
+      method="POST"
+      data-contact-form
+      data-msg-sending={t.sending}
+      data-msg-success={t.successMessage}
+      data-msg-error={t.formError}
+    >
+      <input type="hidden" name="access_key" value={site.web3FormsAccessKey} />
+      <input type="hidden" name="subject" value="پیام جدید از سایت mohsenakbari79.github.io" />
+      <input type="hidden" name="from_name" value="mohsenakbari79.github.io" />
+      <input type="checkbox" name="botcheck" class="hidden" aria-hidden="true" tabindex="-1" />
+
+      <div class="grid gap-5 sm:grid-cols-2">
+        <label class="block">
+          <span class="mb-2 block text-sm font-medium">{t.name}</span>
+          <input
+            type="text"
+            name="name"
+            required
+            autocomplete="name"
+            placeholder={t.namePlaceholder}
+            class="field"
+          />
+        </label>
+
+        <label class="block">
+          <span class="mb-2 block text-sm font-medium">{t.email}</span>
+          <input
+            type="email"
+            name="email"
+            required
+            autocomplete="email"
+            placeholder={t.emailPlaceholder}
+            class="field"
+            dir="ltr"
+          />
+        </label>
+      </div>
+
+      <label class="mt-5 block">
+        <span class="mb-2 block text-sm font-medium">{t.phone}</span>
+        <input
+          type="tel"
+          name="phone"
+          required
+          autocomplete="tel"
+          placeholder={t.phonePlaceholder}
+          class="field"
+          dir="ltr"
+        />
+      </label>
+
+      <label class="mt-5 block">
+        <span class="mb-2 block text-sm font-medium">{t.message}</span>
+        <textarea
+          name="message"
+          required
+          rows="5"
+          placeholder={t.messagePlaceholder}
+          class="field resize-y"></textarea>
+      </label>
+
+      <div class="mt-6 flex flex-wrap items-center gap-4">
+        <button type="submit" data-submit class="btn-primary">
+          <Icon name="send" size={17} />
+          <span data-submit-label>{t.send}</span>
+        </button>
+
+        <p data-form-status class="hidden text-sm font-medium" role="status" aria-live="polite"></p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<script>
+  function initContactForm() {
+    const form = document.querySelector<HTMLFormElement>('[data-contact-form]');
+    if (!form || form.dataset.bound === '1') return;
+    form.dataset.bound = '1';
+
+    const button = form.querySelector<HTMLButtonElement>('[data-submit]');
+    const label = form.querySelector<HTMLElement>('[data-submit-label]');
+    const status = form.querySelector<HTMLElement>('[data-form-status]');
+
+    const sendLabel = label?.textContent ?? '';
+    const msgSending = form.dataset.msgSending ?? '';
+    const msgSuccess = form.dataset.msgSuccess ?? '';
+    const msgError = form.dataset.msgError ?? '';
+
+    const showStatus = (message: string, type: 'success' | 'error') => {
+      if (!status) return;
+      status.textContent = message;
+      status.classList.remove('hidden', 'text-brand', 'text-red-500');
+      status.classList.add(type === 'success' ? 'text-brand' : 'text-red-500');
+    };
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        showStatus(msgError, 'error');
+        return;
+      }
+
+      if (button && label) {
+        button.disabled = true;
+        label.textContent = msgSending;
+      }
+      status?.classList.add('hidden');
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+        });
+        const data = (await response.json()) as { success?: boolean };
+
+        if (response.ok && data.success) {
+          showStatus(msgSuccess, 'success');
+          form.reset();
+        } else {
+          showStatus(msgError, 'error');
+        }
+      } catch {
+        showStatus(msgError, 'error');
+      } finally {
+        if (button && label) {
+          button.disabled = false;
+          label.textContent = sendLabel;
+        }
+      }
+    });
+  }
+
+  initContactForm();
+  document.addEventListener('astro:page-load', initContactForm);
+</script>

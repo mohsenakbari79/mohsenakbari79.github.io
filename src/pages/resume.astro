@@ -1,0 +1,39 @@
+---
+/**
+ * Resume (Persian) — education, experience, projects, courses, social links.
+ * Includes a print button that produces a clean A4 PDF via the browser.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import SocialLinks from '../components/SocialLinks.astro';
+import Education from '../components/Education.astro';
+import Experience from '../components/Experience.astro';
+import Projects from '../components/Projects.astro';
+import Courses from '../components/Courses.astro';
+import Icon from '../components/Icon.astro';
+import { fa } from '../data/fa';
+---
+
+<BaseLayout lang="fa" content={fa}>
+  <div class="mx-auto max-w-6xl px-4 pt-12 sm:px-6">
+    <!-- Print / download action -->
+    <div class="no-print mb-4 flex justify-end">
+      <button type="button" data-print class="btn-ghost" onclick="window.print()">
+        <Icon name="printer" size={17} />
+        {fa.header.title}
+      </button>
+    </div>
+  </div>
+
+  <Education content={fa} />
+  <Experience content={fa} />
+  <Projects content={fa} />
+  <Courses content={fa} />
+
+  <section id="social" class="no-print mx-auto max-w-6xl px-4 py-16 sm:px-6">
+    <SectionHeading title={fa.social_media.title} icon="globe" />
+    <div class="reveal flex justify-center">
+      <SocialLinks />
+    </div>
+  </section>
+</BaseLayout>

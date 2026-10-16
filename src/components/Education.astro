@@ -1,0 +1,40 @@
+---
+/**
+ * Education — degrees list.
+ */
+import SectionHeading from './SectionHeading.astro';
+import Icon from './Icon.astro';
+import type { Content } from '../data/site';
+
+interface Props {
+  content: Content;
+}
+
+const { content } = Astro.props;
+---
+
+<section id="education" class="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+  <SectionHeading title={content.education.title} icon="graduation-cap" />
+
+  <div class="mx-auto grid max-w-3xl gap-6">
+    {
+      content.education.degrees.map((degree) => (
+        <article class="reveal card card-hover flex items-start gap-5 p-6 sm:p-8">
+          <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-brand-soft text-brand">
+            <Icon name="graduation-cap" size={22} />
+          </span>
+          <div>
+            <h3 class="text-lg font-bold">{degree.degree}</h3>
+            {degree.specialization && (
+              <p class="mt-1 text-sm text-sub">{degree.specialization}</p>
+            )}
+            <p class="mt-1 text-sub">{degree.university}</p>
+            <p class="mt-3 text-sm font-medium text-brand">
+              {degree.start_year} - {degree.end_year}
+            </p>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</section>

@@ -1,0 +1,28 @@
+---
+/**
+ * Section heading with an icon, title and decorative accent line.
+ */
+import Icon from './Icon.astro';
+
+interface Props {
+  title: string;
+  icon?: string;
+  subtitle?: string;
+  id?: string;
+}
+
+const { title, icon, subtitle, id } = Astro.props;
+---
+
+<div class="reveal mb-10 flex flex-col items-center text-center" id={id}>
+  {
+    icon && (
+      <span class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl border border-brand/20 bg-brand-soft text-brand">
+        <Icon name={icon} size={22} />
+      </span>
+    )
+  }
+  <h2 class="text-2xl font-extrabold tracking-tight sm:text-3xl">{title}</h2>
+  {subtitle && <p class="mt-2 max-w-2xl text-sub">{subtitle}</p>}
+  <span class="mt-4 h-1 w-14 rounded-full bg-gradient-to-r from-brand to-brand-strong"></span>
+</div>

@@ -1,0 +1,16 @@
+---
+/**
+ * Home (English) — hero + about + skills.
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import About from '../../components/About.astro';
+import Skills from '../../components/Skills.astro';
+import { en } from '../../data/en';
+---
+
+<BaseLayout lang="en" content={en}>
+  <Hero content={en} lang="en" />
+  <About content={en} />
+  <Skills content={en} />
+</BaseLayout>

@@ -1,0 +1,189 @@
+import type { Content } from './site';
+
+/** English content — copied verbatim from the previous site (src/locales/en.json). */
+export const en: Content = {
+  header: {
+    title: 'My Professional Portfolio',
+    language: 'Language',
+  },
+  profile: {
+    name: 'Mohsen Akbari',
+    expertise: 'Full-Stack Developer',
+    phone: 'Phone: +989130330624',
+    email: 'Email: malevin2020@gmail.com',
+    marital_status: 'Marital Status: Single',
+    military_service: 'Military Service: Completed',
+    address: 'Address: Isfahan, Iran',
+    birthday: 'Birthday: 2000/07/31',
+  },
+  about_me: {
+    title: 'Professional Summary',
+    summary:
+      'Experienced full-stack developer with expertise in Python, Django, and React. Strong foundation in systems programming combined with modern web development practices. Passionate about building scalable applications, optimizing database performance, and implementing efficient solutions across the development stack.',
+  },
+  education: {
+    title: 'Education',
+    degrees: [
+      {
+        degree: 'Bachelor of Computer Engineering',
+        university: 'Kashan University',
+        specialization: 'Software Engineering & Database Systems',
+        start_year: '2018',
+        end_year: '2022',
+      },
+    ],
+  },
+  social_media: {
+    title: 'Professional Profiles',
+  },
+  skills: {
+    title: 'Technical Expertise',
+    categories: [
+      {
+        category: 'Backend',
+        skills: ['Python', 'Django', 'Flask', 'FastAPI'],
+      },
+      {
+        category: 'Frontend',
+        skills: ['React.js'],
+      },
+      {
+        category: 'Database',
+        skills: ['PostgreSQL', 'Redis', 'SingleStore'],
+      },
+      {
+        category: 'DevOps',
+        skills: ['Docker', 'Nginx'],
+      },
+      {
+        category: 'Others',
+        skills: ['Celery', 'Kafka', 'Tkinter', 'RabbitMQ'],
+      },
+    ],
+  },
+  experience: {
+    title: 'Professional Experience',
+    tasks_title: 'Key Responsibilities & Achievements',
+    jobs: [
+      {
+        position: 'Software Engineer (Data Engineer & Backend)',
+        company: 'Anacav',
+        period: '2024/09 - Present',
+        tasks: [
+          'Architected and maintained Kafka pipelines processing over 10M records daily',
+          'Enhanced database architectures for PostgreSQL and SingleStore managing 2B+ stored records',
+          'Developed backend services using Flask and FastAPI frameworks',
+          'Configured and maintained Nginx server environments for production deployments',
+        ],
+      },
+      {
+        position: 'Software Developer (Backend & DevOps)',
+        company: 'Payampardaz Company',
+        period: '2022/01 - 2022/10',
+        tasks: [
+          'Developed and maintained Django-based systems for high-performance data processing',
+          'Optimized PostgreSQL and Redis configurations to enhance database efficiency',
+          'Implemented Git workflows in Agile/Scrum development environments',
+          'Designed and documented REST/gRPC APIs for reliable communication across 100+ distributed nodes',
+        ],
+      },
+    ],
+  },
+  contact: {
+    title: 'Contact Information',
+    name: 'Your Name',
+    email: 'Your Email',
+    message: 'Your Message',
+    phone: 'Your Phone',
+    namePlaceholder: 'Enter your name',
+    emailPlaceholder: 'Enter your email',
+    messagePlaceholder: 'Enter your message',
+    phonePlaceholder: 'Enter your phone number',
+    send: 'Send Message',
+    sending: 'Sending...',
+    successMessage: 'Your message was sent successfully!',
+    formError: 'Please fill in all fields.',
+  },
+  project: {
+    title: 'Selected Projects',
+    technologiesUsed: 'Technical Stack',
+    client: 'Client',
+    startDate: 'Project Start Date',
+    endDate: 'Project End Date',
+  },
+  projects: [
+    {
+      title: 'Production Data Management System',
+      description: [
+        'Engineered industrial data management platform with role-based access',
+        'Developed automated reporting tools for operational analytics',
+        'Implemented data processing pipelines using pandas and openpyxl',
+      ],
+      technologies: ['Python', 'Django', 'PostgreSQL', 'pandas', 'openpyxl', 'Docker'],
+      client: 'Ipek Yadegar Ilyad',
+      startDate: '2024/10/02',
+      endDate: 'Ongoing',
+    },
+    {
+      title: 'Shirino Hotel',
+      description: [
+        'Developed employee meal reservation system with priority management',
+        'Implemented automated SMS notification service',
+        'Designed scheduled task system using APScheduler',
+      ],
+      technologies: ['Django', 'PostgreSQL', 'APScheduler', 'Docker', 'Nginx', 'DRF'],
+      client: 'Shirino Hotel',
+      startDate: '2024/11/22',
+      endDate: '2025/02/01',
+    },
+    {
+      title: 'Corporate Services Portal',
+      description: [
+        'Developed company profile website with interactive service showcase',
+        'Implemented geographical project visualization using folium',
+        'Created dynamic project gallery with detailed descriptions',
+      ],
+      technologies: ['Django', 'PostgreSQL', 'MVT', 'Docker', 'Nginx', 'Folium'],
+      client: 'Royasazan Construction',
+      startDate: '2020/07/22',
+      endDate: '2020/09/23',
+    },
+    {
+      title: 'Data Visualization Dashboard',
+      description: [
+        'Developed board management system for data visualization',
+        'Implemented scheduled tasks using Celery and RabbitMQ',
+        'Designed robust data transfer mechanisms for academic use',
+      ],
+      technologies: ['Python', 'Django', 'DRF', 'Docker', 'RabbitMQ', 'Celery'],
+      client: 'University Research Project',
+      startDate: '2022/06/22',
+      endDate: '2022/09/22',
+    },
+  ],
+  courses: {
+    title: 'Professional Certifications',
+    date: 'Completion Date',
+    source: 'Provider',
+  },
+  course: [
+    {
+      title: 'Advanced Django Development',
+      date: '2023/02/17',
+      source: 'Maktabkhooneh',
+      link: 'https://maktabkhooneh.org/certificates/mk-729eq0/?print=true',
+    },
+    {
+      title: 'Machine Learning Fundamentals',
+      date: '2021/11/23',
+      source: 'Maktabkhooneh',
+      link: 'https://maktabkhooneh.org/certificates/mk-gll8de/?print=true',
+    },
+    {
+      title: 'Advanced Python Programming',
+      date: '2019/10/27',
+      source: 'Maktabkhooneh',
+      link: 'https://maktabkhooneh.org/certificates/mk-tqffrc/?print=true',
+    },
+  ],
+};

@@ -1,0 +1,100 @@
+---
+/**
+ * Hero — name, expertise, quick facts, social links and CTAs.
+ */
+import Icon from './Icon.astro';
+import SocialLinks from './SocialLinks.astro';
+import type { Content, Locale } from '../data/site';
+
+interface Props {
+  content: Content;
+  lang: Locale;
+}
+
+const { content, lang } = Astro.props;
+const { profile } = content;
+
+const facts = [
+  { icon: 'phone', text: profile.phone },
+  { icon: 'mail', text: profile.email },
+  { icon: 'map-pin', text: profile.address },
+  { icon: 'calendar', text: profile.birthday },
+  { icon: 'user-round', text: profile.marital_status },
+  { icon: 'shield-check', text: profile.military_service },
+];
+
+const labels = {
+  fa: { resume: 'مشاهده رزومه', contact: 'تماس با من' },
+  en: { resume: 'View Resume', contact: 'Contact Me' },
+}[lang];
+---
+
+<section class="relative overflow-hidden pt-16 pb-20 sm:pt-24">
+  <!-- Decorative gradient orbs -->
+  <div class="hero-orb -top-24 start-[-6rem] h-96 w-96 bg-[var(--c-glow-1)]"></div>
+  <div class="hero-orb -top-10 end-[-4rem] h-80 w-80 bg-[var(--c-glow-2)]"></div>
+  <div class="hero-orb top-40 start-1/3 h-64 w-64 bg-[var(--c-glow-3)]"></div>
+
+  <div class="relative mx-auto grid max-w-6xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-[1fr_auto]">
+    <div class="reveal">
+      <p class="mb-3 inline-flex items-center gap-2 rounded-full border border-brand/25 bg-brand-soft/60 px-4 py-1.5 text-sm font-medium text-brand">
+        <span class="relative flex h-2 w-2">
+          <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand opacity-60"></span>
+          <span class="relative inline-flex h-2 w-2 rounded-full bg-brand"></span>
+        </span>
+        {profile.expertise}
+      </p>
+
+      <h1 class="text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
+        {profile.name}
+      </h1>
+
+      <p class="mt-4 max-w-xl text-lg text-sub">
+        {profile.expertise}
+      </p>
+
+      <!-- Quick facts -->
+      <ul class="mt-8 grid max-w-2xl gap-3 sm:grid-cols-2">
+        {
+          facts.map((fact) => (
+            <li class="flex items-center gap-3 text-sm text-sub">
+              <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-line bg-card text-brand">
+                <Icon name={fact.icon} size={16} />
+              </span>
+              <span dir="auto">{fact.text}</span>
+            </li>
+          ))
+        }
+      </ul>
+
+      <div class="mt-10 flex flex-wrap items-center gap-4">
+        <a href={lang === 'fa' ? '/resume' : '/en/resume'} class="btn-primary">
+          <Icon name="briefcase" size={18} />
+          {labels.resume}
+        </a>
+        <a href={lang === 'fa' ? '/contact' : '/en/contact'} class="btn-ghost">
+          <Icon name="send" size={18} />
+          {labels.contact}
+        </a>
+      </div>
+
+      <SocialLinks class="mt-8" />
+    </div>
+
+    <!-- Portrait -->
+    <div class="reveal justify-self-center lg:justify-self-end">
+      <div
+        class="relative rounded-[2rem] bg-gradient-to-br from-brand via-brand-strong to-[var(--c-glow-2)] p-1 shadow-2xl shadow-brand/25"
+      >
+        <img
+          src="/profile.png"
+          alt={profile.name}
+          width="300"
+          height="300"
+          class="h-64 w-64 rounded-[1.85rem] object-cover sm:h-72 sm:w-72"
+          loading="eager"
+        />
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,53 @@
+---
+/**
+ * Skills — technical expertise grouped by category.
+ */
+import Icon from './Icon.astro';
+import SectionHeading from './SectionHeading.astro';
+import type { Content } from '../data/site';
+
+interface Props {
+  content: Content;
+}
+
+const { content } = Astro.props;
+
+const categoryIcons: Record<string, string> = {
+  Backend: 'server',
+  Frontend: 'code',
+  Database: 'database',
+  DevOps: 'layers',
+  Others: 'folder',
+};
+---
+
+<section id="skills" class="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+  <SectionHeading title={content.skills.title} icon="code" />
+
+  <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    {
+      content.skills.categories.map((cat, i) => (
+        <article
+          class="reveal card card-hover p-6"
+          style={`transition-delay: ${i * 70}ms`}
+        >
+          <div class="mb-4 flex items-center gap-3">
+            <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-soft text-brand">
+              <Icon name={categoryIcons[cat.category] ?? 'folder'} size={20} />
+            </span>
+            <h3 class="text-lg font-bold" dir="ltr">
+              {cat.category}
+            </h3>
+          </div>
+          <ul class="flex flex-wrap gap-2">
+            {cat.skills.map((skill) => (
+              <li class="chip" dir="ltr">
+                {skill}
+              </li>
+            ))}
+          </ul>
+        </article>
+      ))
+    }
+  </div>
+</section>
